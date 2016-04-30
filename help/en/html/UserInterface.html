@@ -1,0 +1,101 @@
+﻿<html>
+	
+<head>
+	<title>User Interface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Autocopy, History, Button, Simple Mode, Mode, , , System, Tray, , , Menu, , Minimized, Autostart, , , , , Calculation Field, User Interface">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("UserInterface");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">User Interface</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="QuickGuide.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Preferences.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">User Interface</span></span></h3>
+<p class="rvps4"><span class="rvts6">The main interface of </span><span class="rvts11">SUM</span><span class="rvts6"> has two </span><span class="rvts11">modes</span><span class="rvts6"> - </span><span class="rvts11">Simple </span><span class="rvts6">(default) and </span><span class="rvts11">History</span><span class="rvts6">. To switch between them use </span><span class="rvts11">History button</span><span class="rvts6"> (the images below - </span><span class="rvts11">b</span><span class="rvts6">) or </span><span class="rvts11">Ctrl-H</span><span class="rvts6"> shortcut key. There are also </span><span class="rvts11">Ctrl-Up</span><span class="rvts6"> and </span><span class="rvts11">Ctrl-Down</span><span class="rvts6"> additional shortcut keys, to open and close History, respectively. The main window can be freely resized. After History is open, it can be resized vertically as well.</span></p>
+<p class="rvps4"><span class="rvts6">The </span><span class="rvts11">Calculation Field</span><span class="rvts6"> has an icon showing </span><span class="rvts11">Autocopy</span><span class="rvts6"> state (the images below - </span><span class="rvts11">a</span><span class="rvts6">). </span><span class="rvts11">Autocopy</span><span class="rvts6"> is </span><span class="rvts11">On</span><span class="rvts6"> if the icon is active. The state can be changed by </span><span class="rvts11">Menu </span><span class="rvts6">(the images below - </span><span class="rvts11">c</span><span class="rvts6">) or </span><span class="rvts11">Ctrl-Shift-C</span><span class="rvts6"> shortcut key (see </span><a class="rvts15" href="Shortcutkeys.html">Shortcut keys</a><span class="rvts6">). It's useful to turn </span><span class="rvts11">Off</span><span class="rvts6"> Autocopy, if something important is already is copied in clipboard.</span></p>
+<p class="rvps4"><span class="rvts6">The indicator at the right of the title on Title bar surrounding by square brackets shows the current angle units for trigonometric function. Two possible units are available - </span><span class="rvts11">degrees</span><span class="rvts6"> (by default) and </span><span class="rvts11">radians</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts11">SUM</span><span class="rvts6"> has no option to minimize or close main window (program Exit is available by main Menu or a shortcut key). If </span><span class="rvts11">Close</span><span class="rvts6"> button is pressed, </span><span class="rvts11">SUM</span><span class="rvts6"> is minimized to </span><span class="rvts11">System Tray</span><span class="rvts6">. The tray icon is always available to bring it back, but it's actually more preferable to use </span><span class="rvts14">Global Shortcut Key </span><span class="rvts6">(see </span><a class="rvts15" href="Preferences.html">Preferences</a><span class="rvts6">). In case of autostart with System, there is an option to </span><span class="rvts11">Start minimized</span><span class="rvts6"> in </span><a class="rvts15" href="Preferences.html">Preferences</a><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6">To </span><span class="rvts11">Reset </span><span class="rvts6">the main window position and size as well as all </span><a class="rvts15" href="Preferences.html">Preferences</a><span class="rvts6">, use corresponding option (note that History will stay unchanged).</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/main_en.png"></p>
+<p class="rvps5"><span class="rvts23">Simple Mode</span><span class="rvts16"> - History is closed but reachable.</span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/main_hst_en.png"></p>
+<p class="rvps12"><span class="rvts23">History</span><span class="rvts23"> Mode</span><span class="rvts16"> - History is open.</span></p>
+<p class="rvps13"><span class="rvts25">1. Title bar</span><span class="rvts24"> - with angle units indicator,&nbsp;</span><span class="rvts25"> 2. Calculation Field</span><span class="rvts24"> - the state after calculation is done,&nbsp;</span><span class="rvts25"> 3. History</span><span class="rvts24"> - has no selection.</span></p>
+<p class="rvps14"><span class="rvts25">a) Autocopy icon</span><span class="rvts24"> - shows autocopy state (On), &nbsp;</span><span class="rvts25">b) History button</span><span class="rvts24"> - pressed if History is open, &nbsp;</span><span class="rvts25">c) Menu button</span><span class="rvts24">.</span></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Calculation Field and History</span></span></h3>
+<p class="rvps4"><span class="rvts6">The </span><span class="rvts11">Calculation Filed</span><span class="rvts6"> has permanent focus for input, if the main window is active, so all keyboard key combinations will affect also the </span><span class="rvts11">Calculation Field</span><span class="rvts6">. This field has two implicit states - </span><span class="rvts11">Edit</span><span class="rvts6"> and </span><span class="rvts11">Free</span><span class="rvts6">. These states are defined generally by user input.</span></p>
+<p class="rvps4"><span class="rvts6">Once user typed/deleted a character or edited text in Calculation Field, the state turns to </span><span class="rvts11">Edit</span><span class="rvts6">, and moving through History becomes unavailable. If the calculation is </span><span class="rvts11">done</span><span class="rvts6"> or the input field is </span><span class="rvts11">empty</span><span class="rvts6">, the state becomes </span><span class="rvts11">Free</span><span class="rvts6">, and History is available by </span><span class="rvts11">Up</span><span class="rvts6"> key.</span></p>
+<p class="rvps4"><span class="rvts6">Standard context menu as well as standard text field operations (i.e </span><span class="rvts12">Enter</span><span class="rvts6">, </span><span class="rvts12">Backspace</span><span class="rvts6">, </span><span class="rvts12">Delete</span><span class="rvts6">, </span><span class="rvts12">Undo</span><span class="rvts6">, etc.) are available for </span><span class="rvts11">Calculation filed</span><span class="rvts6"> by default. In addition, there are some custom shortcut keys:</span></p>
+<p class="rvps15"><span class="rvts26">Up</span><span class="rvts27"> - up (back) in history list (move to History if state is Free),</span></p>
+<p class="rvps15"><span class="rvts26">Down</span><span class="rvts27"> - down (forth) in history list,</span></p>
+<p class="rvps15"><span class="rvts26">Ctrl-C</span><span class="rvts27"> - copy expression of current item from History if selected (copy text if Calculation Field has a selection),</span></p>
+<p class="rvps15"><span class="rvts26">Ctrl-R </span><span class="rvts27">- copy result of</span><span class="rvts26"> </span><span class="rvts27">current item from History if selected,</span></p>
+<p class="rvps15"><span class="rvts26">Ctrl-S </span><span class="rvts27">- manually save History (it is always automatically saving on Exit),</span></p>
+<p class="rvps15"><span class="rvts26">Del</span><span class="rvts27"> - remove current item from History if selected (generally does standard text delete operation),</span></p>
+<p class="rvps16"><span class="rvts27">etc.</span></p>
+<p class="rvps8"><span class="rvts6">See </span><a class="rvts15" href="Shortcutkeys.html">Shortcut keys</a><span class="rvts6"> topic for all shortcut keys.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

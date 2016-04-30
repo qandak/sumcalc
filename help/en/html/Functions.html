@@ -1,0 +1,94 @@
+﻿<html>
+	
+<head>
+	<title>Functions</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Functions, Quick help, Suggestions">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Functions");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Functions</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Calculations.html">Calculations</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Calculations.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Constantsandvariables.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Numericvalues.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Functions</span></span></h3>
+<p class="rvps4"><span class="rvts6">Functions are the most powerful elements for calculation in SUM. There are more than </span><span class="rvts11">120</span><span class="rvts6"> function, both </span><span class="rvts12">Python</span><span class="rvts6"> built-ins and custom functions. Large portion of custom functions are unit </span><span class="rvts11">converters</span><span class="rvts6">. They differ from the rest by "_" underscore separator, "in_mm" for example, which means "inch to millimeter" (see </span><a class="rvts15" href="Functionslist.html">Functions list</a><span class="rvts6"> topic for all functions).</span></p>
+<p class="rvps4"><span class="rvts6">All functions consist of a </span><span class="rvts11">name</span><span class="rvts6">, </span><span class="rvts11">delimiters</span><span class="rvts6"> (parentheses), and one or more </span><span class="rvts11">arguments</span><span class="rvts6">. The pattern is &nbsp;- &nbsp;</span><span class="rvts12">name</span><span class="rvts6">( </span><span class="rvts12">argument[s] </span><span class="rvts6">). Any allowed</span><span class="rvts35">1</span><span class="rvts6"> element or expression, including functions, can be placed as an arguments.</span></p>
+<p class="rvps4"><span class="rvts6">Arguments can be also </span><span class="rvts11">optional</span><span class="rvts6">, so omitted. These arguments are </span><span class="rvts12">italics</span><span class="rvts6"> in </span><span class="rvts12">Quick help</span><span class="rvts6"> (see Quick help example below).</span></p>
+<p class="rvps23"><img alt="" style="padding : 1px;" src="lib/quickhelp_en.png"></p>
+<p class="rvps20"><span class="rvts23">Quick help</span><span class="rvts16"> for a function (third argument of the function is optional).</span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/nameerror_en.png"></p>
+<p class="rvps12"><span class="rvts23">Name error</span><span class="rvts16"> notification with </span><span class="rvts23">suggestions</span><span class="rvts16">.</span></p>
+<p class="rvps22"><span class="rvts6">There are two helpers available for functions:</span></p>
+<p class="rvps4"><span class="rvts14">Quick help: </span><span class="rvts6">to see </span><span class="rvts12">Quick help</span><span class="rvts6"> for the function, just write </span><span class="rvts14">h</span><span class="rvts6"> or </span><span class="rvts14">help</span><span class="rvts6"> inside parentheses, in place of arguments. If </span><span class="rvts12">Quick help</span><span class="rvts6"> is called for more than one function, only first from the left will be shown.</span></p>
+<p class="rvps8"><span class="rvts14">Suggestions:</span><span class="rvts6"> if the name of a function is mistyped, SUM is trying to find and show the most close functions' names after </span><span class="rvts11">|</span><span class="rvts6"> (pipe) separator.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps24"><span class="rvts36">1. For particular arguments of some functions there are specific limits. In case of argument error, as well as all calculation errors, user is always notified by notification balloon.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

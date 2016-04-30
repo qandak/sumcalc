@@ -1,0 +1,93 @@
+﻿<html>
+	
+<head>
+	<title>Вычисления</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", , , , , , , , , , , Python, Автокопирование, Восьмеричные, Двоичный, Шестнадцатеричный, Идентификаторы, Константа, Операторы, Поле Вычислений, Разделители, Функции">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Calculations");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Вычисления</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="ConstantsandVariablesdialog.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Constantsandvariables.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Вычисления</span></span></h3>
+<p class="rvps4"><span class="rvts6">Средства вычисления программы основаны на интерпретаторе </span><a class="rvts13" href="http://www.python.org/" target="_blank">Python</a><span class="rvts6"> (для версии Python смотр. </span><span class="rvts12">О программе</span><span class="rvts6"> в главном Меню). Это значит беспокоится по поводу точности математических расчетов не стоит.</span></p>
+<p class="rvps4"><span class="rvts6">Так как </span><span class="rvts11">SUM</span><span class="rvts6"> использует однострочный синтаксис для вычислительных выражений - вложенность любых элементов, подвыражений и небуквенных математических символов, должна быть составлена с помощью скобок.</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/comp_ru_bw.png" onmouseover="this.src='lib/comp_ru_cl.png';" onmouseout="this.src='lib/comp_ru_bw.png';"></p>
+<p class="rvps7"><span class="rvts16">Перевод математического выражения в однострочный.</span></p>
+<p class="rvps19"><span class="rvts19">Наведите курсор для визуального подчеркивания перевода.</span></p>
+<p class="rvps4"><span class="rvts6">В примере выше, символ </span><span class="rvts11">«квадратного корня»</span><span class="rvts6"> переведен в функцию </span><span class="rvts11">sqrt( )</span><span class="rvts6"> (смотр. </span><a class="rvts15" href="Functionslist.html">Список функций</a><span class="rvts6"> для всех функций), который получает вложенное выражение как аргумент. Переменная </span><span class="rvts11">x</span><span class="rvts6"> в примере должна быть заранее назначена пользователем, в отличие от </span><span class="rvts11">pi</span><span class="rvts6"> (</span><span class="rvts17">π</span><span class="rvts6">), которая является встроенной программной константой (смотр. </span><a class="rvts15" href="Constantsandvariables.html">Константы и переменные</a><span class="rvts6">).</span></p>
+<p class="rvps4"><span class="rvts6">Сразу после завершения вычисления, оно автоматически добавляется в Историю (если не снимать отметку </span><span class="rvts11">Добавить в Историю</span><span class="rvts6"> в </span><a class="rvts15" href="Preferences.html">Настройках</a><span class="rvts6">), а результат, в свою очередь, копируется в буфер обмена (если не отключена опция </span><span class="rvts11">Автокопирование результата</span><span class="rvts6">).</span></p>
+<p class="rvps4"><span class="rvts11">Поле Вычислений</span><span class="rvts6"> имеет постоянный фокус ввода, если главное окно активно. Данное поле имеет два неявных состояния - </span><span class="rvts11">Свободное</span><span class="rvts6"> и </span><span class="rvts11">Редактирования</span><span class="rvts6">, и определяются они в основном вводом пользователя. В случае </span><span class="rvts11">пустого</span><span class="rvts6"> поля ввода, а также после </span><span class="rvts11">завершения</span><span class="rvts6"> вычисления, состояние </span><span class="rvts11">Свободное</span><span class="rvts6">.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">Лексический анализ</span></span></h3>
+<p class="rvps4"><span class="rvts6">Все выражения в SUM читаются «парсером» (программа разбора). Вводом для парсера является поток лексем, сгенерированный лексическим анализатором. Если выражение не поддается разбору, выдается ошибка.</span></p>
+<p class="rvps4"><span class="rvts6">Лексемами являются:</span></p>
+<p class="rvps4"><span class="rvts11">Идентификаторы</span><span class="rvts6"> - </span><span class="rvts12">имена</span><span class="rvts6"> </span><span class="rvts11">констант</span><span class="rvts6">, </span><span class="rvts11">переменных</span><span class="rvts6"> и </span><span class="rvts11">функций</span><span class="rvts6">, допустимыми символами которых являются буквы верхнего и нижнего регистра, символ нижнего подчеркивания «_», и, за исключением первого символа, цифры от 0 до 9 (смотр. соответствующий раздел - </span><a class="rvts15" href="Constantsandvariables.html">Константы и переменные</a><span class="rvts6"> или </span><a class="rvts15" href="Functions.html">Функции</a><span class="rvts6">),</span></p>
+<p class="rvps4"><span class="rvts29">Числовые значения</span><span class="rvts28"> - </span><span class="rvts29">целочисленные</span><span class="rvts28">, </span><span class="rvts29">десятичные</span><span class="rvts28"> и специальные типы значений - </span><span class="rvts29">двоичные</span><span class="rvts28">, </span><span class="rvts29">восьмеричные</span><span class="rvts28">, и </span><span class="rvts29">шестнадцатеричные</span><span class="rvts28"> (cмотр. раздел </span><a class="rvts15" href="Numericvalues.html">Числовые значения)</a><span class="rvts6">,</span></p>
+<p class="rvps4"><span class="rvts29">Операторы</span><span class="rvts28"> - &nbsp;+, &nbsp;-, &nbsp;*, &nbsp;**, &nbsp;/ и // (смотр. раздел </span><a class="rvts15" href="Operatorsanddelimiters.html">Операторы и разделители</a><span class="rvts28">),</span></p>
+<p class="rvps8"><span class="rvts29">Разделители</span><span class="rvts28"> - открывающие и закрывающие скобки «</span><span class="rvts29">( )</span><span class="rvts28">» и </span><span class="rvts29">запятая</span><span class="rvts28"> «</span><span class="rvts29">,</span><span class="rvts28">» (смотр. раздел </span><a class="rvts15" href="Operatorsanddelimiters.html">Операторы и разделители</a><span class="rvts28">).</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

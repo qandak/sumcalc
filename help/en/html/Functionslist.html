@@ -1,0 +1,339 @@
+﻿<html>
+	
+<head>
+	<title>Functions list</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", Functions, Trigonometric, Logarithmic, Special, Converter">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Functionslist");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Functions list</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Errors.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Shortcutkeys.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">General math functions</span></span></h3>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">abs(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the absolute value of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">amn(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the Arithmetic Mean (average) of all arguments.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">bin(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the binary representation of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cbrt(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the cube root of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ceil(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the ceiling of </span><span class="rvts40">x</span><span class="rvts39"> - the smallest integer greater than or equal to </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">dd(</span></span><span class="rvts0"><span class="rvts42"> degrees </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts degrees in decimal value to Degrees(°), Minutes(') and Seconds(") in the form of </span><span class="rvts40">dms(</span><span class="rvts49">degrees, minutes, seconds</span><span class="rvts40">)</span><span class="rvts39"> function.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">deg(</span></span><span class="rvts0"><span class="rvts42"> radians </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Radians to Degrees.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">dms(</span></span><span class="rvts0"><span class="rvts42"> degrees </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">minutes </span></span><span class="rvts0"><span class="rvts41">,</span></span><span class="rvts0"><span class="rvts45"> </span></span><span class="rvts0"><span class="rvts44">seconds</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Degrees(°), Minutes('), Seconds(") to decimal value.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">dperc(</span></span><span class="rvts0"><span class="rvts42"> old </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">new </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the percentage change from </span><span class="rvts40">old</span><span class="rvts39"> to </span><span class="rvts40">new</span><span class="rvts39"> numbers.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">exp(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns </span><span class="rvts40">e</span><span class="rvts39"> raised to the power </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">fact(</span></span><span class="rvts0"><span class="rvts42"> n </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns </span><span class="rvts40">n</span><span class="rvts39"> factorial. Raises an error if </span><span class="rvts40">n</span><span class="rvts39"> is not integral or is negative. </span><span class="rvts40">n</span><span class="rvts39"> is limited by </span><span class="rvts40">64</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">floor(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the floor of </span><span class="rvts40">x</span><span class="rvts39"> - the largest integer less than or equal to </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">gcd(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">y </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the Greatest Common Divisor (GCD) of integers </span><span class="rvts40">x</span><span class="rvts39"> and </span><span class="rvts40">y</span><span class="rvts39">. If either </span><span class="rvts40">x</span><span class="rvts39"> or </span><span class="rvts40">y</span><span class="rvts39"> is nonzero, then the value of </span><span class="rvts40">gcd( x , y )</span><span class="rvts39"> is the largest positive integer that divides both </span><span class="rvts40">x</span><span class="rvts39"> and </span><span class="rvts40">y</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">gmn(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the Geometric Mean of all arguments.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">hex(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the hexadecimal representation of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">hmn(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the Harmonic Mean of all arguments.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">hyp(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">y </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the Euclidean norm, sqrt(x*x + y*y), the length of the vector from the origin to point (</span><span class="rvts40">x</span><span class="rvts39">, </span><span class="rvts40">y</span><span class="rvts39">).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">max(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the largest item in arguments list.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">min(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the smallest item in arguments list.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">mod(</span></span><span class="rvts0"><span class="rvts42"> dividend </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">divisor </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the remainder after division.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">oct(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the octal representation of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">pc(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">percent </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the </span><span class="rvts40">percent</span><span class="rvts39"> of </span><span class="rvts40">x</span><span class="rvts39"> (see also </span><span class="rvts40">perc</span><span class="rvts39"> function).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">perc(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">percent </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns </span><span class="rvts40">x</span><span class="rvts39"> increased or (-) decreased by </span><span class="rvts40">percent</span><span class="rvts39"> (see also </span><span class="rvts40">pc</span><span class="rvts39"> function).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">pow(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">y </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns </span><span class="rvts40">x</span><span class="rvts39"> raised to the power </span><span class="rvts40">y</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">rad(</span></span><span class="rvts0"><span class="rvts42"> degrees </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Degrees to Radians.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">round(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts44">dig</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">if </span><span class="rvts46">dig</span><span class="rvts39"> is omitted, returns the nearest integer of </span><span class="rvts40">x</span><span class="rvts39">, otherwise - rounded to </span><span class="rvts46">dig</span><span class="rvts39"> (digits) after point.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">rt(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">N </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the </span><span class="rvts40">N</span><span class="rvts47">th</span><span class="rvts39"> root of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqrt(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the square root of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sum(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the Sum of all arguments.</span></p>
+<h3 class="rvps29"><span class="rvts0"><span class="rvts20">Trigonometric functions</span></span></h3>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">acosh(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the inverse hyperbolic cosine of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">asinh(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the inverse hyperbolic sine of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">atanh(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the inverse hyperbolic tangent of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cosh(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the hyperbolic cosine of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sinh(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the hyperbolic sine of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">tanh(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the hyperbolic tangent of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">acos(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the arc cosine of </span><span class="rvts40">x</span><span class="rvts39"> in radians or degrees.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">asin(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the arc sine of </span><span class="rvts40">x</span><span class="rvts39"> in radians or degrees.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">atan(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the arc tangent of </span><span class="rvts40">x</span><span class="rvts39"> in radians or degrees.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">atan2(</span></span><span class="rvts0"><span class="rvts42"> y </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns</span><span class="rvts40"> atan( y</span><span class="rvts39"> </span><span class="rvts40">/</span><span class="rvts39"> </span><span class="rvts40">x )</span><span class="rvts39"> in radians or degrees.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cos(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the cosine of </span><span class="rvts40">x</span><span class="rvts39"> angle (in radians or degrees).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sin(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the sine of </span><span class="rvts40">x</span><span class="rvts39"> angle (in radians or degrees).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">tan(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the tangent of </span><span class="rvts40">x</span><span class="rvts39"> angle (in radians or degrees).</span></p>
+<h3 class="rvps29"><span class="rvts0"><span class="rvts20">Logarithmic functions</span></span></h3>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">log10(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the base-</span><span class="rvts40">10</span><span class="rvts39"> logarithm of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">log2(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the base-</span><span class="rvts40">2</span><span class="rvts39"> logarithm of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">log(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">y </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the logarithm of </span><span class="rvts40">x</span><span class="rvts39"> to the </span><span class="rvts40">y</span><span class="rvts39"> base.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">lg(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the base-</span><span class="rvts40">10</span><span class="rvts39"> logarithm of </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ln(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the natural logarithm of </span><span class="rvts40">x</span><span class="rvts39"> (to base </span><span class="rvts40">e</span><span class="rvts39">).</span></p>
+<h3 class="rvps29"><span class="rvts0"><span class="rvts20">Special functions</span></span></h3>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cdf(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns cumulative distribution function (CDF) for the standard normal distribution.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">erf(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the error function at </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">erfc(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the complementary error function at </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">gamma(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the Gamma function at </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">lgamma(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">returns the natural logarithm of the absolute value of the Gamma function at </span><span class="rvts40">x</span><span class="rvts39">.</span></p>
+<h3 class="rvps29"><span class="rvts0"><span class="rvts20">Converter functions</span></span></h3>
+<p class="rvps31"><span class="rvts48">Length</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">in_mm(</span></span><span class="rvts0"><span class="rvts42"> inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Inch to Millimeter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">in_cm(</span></span><span class="rvts0"><span class="rvts42"> inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Inch to Centimeter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">in_m(</span></span><span class="rvts0"><span class="rvts42"> inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Inch to Meter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ft_in(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Foot to Inch.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ft_mm(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Foot to Millimeter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ft_cm(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Foot to Centimeter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ft_m(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Foot to Meter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ftin_cm(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Foot and Inches to Centimeter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ftin_m(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Foot and Inches to Meter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">yd_in(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Yard to Inch.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">yd_ft(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Yard to Foot.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">yd_mm(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Yard to Millimeter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">yd_cm(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Yard to Centimeter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">yd_m(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Yard to Meter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">yd_km(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Yard to Kilometer.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">mi_yd(</span></span><span class="rvts0"><span class="rvts42"> mile </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Mile to Yard.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">mi_m(</span></span><span class="rvts0"><span class="rvts42"> mile </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Mile to Meter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">mi_km(</span></span><span class="rvts0"><span class="rvts42"> mile </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Mile to Kilometer.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">mm_in(</span></span><span class="rvts0"><span class="rvts42"> mm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Millimeter to Inch.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cm_in(</span></span><span class="rvts0"><span class="rvts42"> cm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Centimeter to Inch.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cm_ft(</span></span><span class="rvts0"><span class="rvts42"> cm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Centimeter to Foot.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cm_ftin(</span></span><span class="rvts0"><span class="rvts42"> cm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Centimeter to Foot and Inches in the form of </span><span class="rvts40">ftin_cm(</span><span class="rvts49">foot, inch</span><span class="rvts40">)</span><span class="rvts39"> function.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">m_ftin(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Meter to Foot and Inches in the form of </span><span class="rvts40">ftin_m(</span><span class="rvts49">foot, inch</span><span class="rvts40">)</span><span class="rvts39"> function.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">m_in(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Meter to Inch.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">m_ft(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Meter to Foot.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">m_yd(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Meter to Yard.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">m_mi(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Meter to Mile.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">km_mi(</span></span><span class="rvts0"><span class="rvts42"> km </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Kilometer to Mile.</span></p>
+<p class="rvps30"><span class="rvts48">Area</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqcm_sqin(</span></span><span class="rvts0"><span class="rvts42"> sqcm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Centimeter to Square Inch.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqm_sqft(</span></span><span class="rvts0"><span class="rvts42"> sqm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Meter to Square Foot.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqm_sqyd(</span></span><span class="rvts0"><span class="rvts42"> sqm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Meter to Square Yard.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqm_ac(</span></span><span class="rvts0"><span class="rvts42"> sqm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Meter to Acre.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqm_ha(</span></span><span class="rvts0"><span class="rvts42"> sqm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Meter to Hectare.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqkm_sqmi(</span></span><span class="rvts0"><span class="rvts42"> sqkm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Kilometer to Square Mile.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqin_sqcm(</span></span><span class="rvts0"><span class="rvts42"> sqin </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Inch to Square Centimeter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqft_sqm(</span></span><span class="rvts0"><span class="rvts42"> sqft </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Foot to Square Meter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqyd_sqm(</span></span><span class="rvts0"><span class="rvts42"> sqyd </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Yard to Square Meter.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqmi_sqkm(</span></span><span class="rvts0"><span class="rvts42"> sqmi </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Mile to Square Kilometer.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqmi_ac(</span></span><span class="rvts0"><span class="rvts42"> sqmi </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Mile to Acre.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">sqmi_ha(</span></span><span class="rvts0"><span class="rvts42"> sqmi </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Square Mile to Hectare.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ac_ha(</span></span><span class="rvts0"><span class="rvts42"> ac </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Acre to Hectare.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ha_ac(</span></span><span class="rvts0"><span class="rvts42"> ha </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Hectare to Acre.</span></p>
+<p class="rvps30"><span class="rvts48">Volume</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">l_usgal(</span></span><span class="rvts0"><span class="rvts42"> l </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Litre to US Gallon.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">l_ukgal(</span></span><span class="rvts0"><span class="rvts42"> l </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Litre to UK Gallon.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">gal_pt(</span></span><span class="rvts0"><span class="rvts42"> gal </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Gallon (either US or UK) to Pint.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ukgal_l(</span></span><span class="rvts0"><span class="rvts42"> ukgal </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts UK Gallon to Litre.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">usgal_l(</span></span><span class="rvts0"><span class="rvts42"> usgal </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts US Gallon to Litre.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">oz_g(</span></span><span class="rvts0"><span class="rvts42"> ounce </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Ounce to Gram.</span></p>
+<p class="rvps30"><span class="rvts48">Weight</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">lb_oz(</span></span><span class="rvts0"><span class="rvts42"> pound </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Pound to Ounce.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">lb_g(</span></span><span class="rvts0"><span class="rvts42"> pound </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Pound to Gram.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">lb_kg(</span></span><span class="rvts0"><span class="rvts42"> pound </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Pound to Kilogram.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">g_oz(</span></span><span class="rvts0"><span class="rvts42"> gram </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Gram to Ounce.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">g_lb(</span></span><span class="rvts0"><span class="rvts42"> gram </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Gram to Pound.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">kg_oz(</span></span><span class="rvts0"><span class="rvts42"> kg </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Kilogram to Ounce.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">kg_lb(</span></span><span class="rvts0"><span class="rvts42"> kg </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Kilogram to Pound.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ct_g(</span></span><span class="rvts0"><span class="rvts42"> ct </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Carat to Gram.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">ct_oz(</span></span><span class="rvts0"><span class="rvts42"> ct </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Carat to Ounce.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">g_ct(</span></span><span class="rvts0"><span class="rvts42"> g </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Gram to Carat.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">oz_ct(</span></span><span class="rvts0"><span class="rvts42"> oz </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Ounce to Carat.</span></p>
+<p class="rvps30"><span class="rvts48">Energy</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">wh_cl(</span></span><span class="rvts0"><span class="rvts42"> watt </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Watt-hour to Calorie.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">wh_j(</span></span><span class="rvts0"><span class="rvts42"> watt_h </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Watt-hour to Joule.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cl_j(</span></span><span class="rvts0"><span class="rvts42"> calorie </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Calorie to Joule.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">cl_wh(</span></span><span class="rvts0"><span class="rvts42"> calorie </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Calorie to Watt-hour.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">j_cl(</span></span><span class="rvts0"><span class="rvts42"> joule </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Joule to Calorie.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">j_wh(</span></span><span class="rvts0"><span class="rvts42"> joule </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Joule to Watt-hour.</span></p>
+<p class="rvps30"><span class="rvts48">Power</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">kw_hp(</span></span><span class="rvts0"><span class="rvts42"> kw </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts KiloWatt to Horsepower.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">hp_kw(</span></span><span class="rvts0"><span class="rvts42"> hp </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Horsepower to KiloWatt.</span></p>
+<p class="rvps30"><span class="rvts48">Temperature</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">c_f(</span></span><span class="rvts0"><span class="rvts42"> c </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Celsius to Fahrenheit.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">c_k(</span></span><span class="rvts0"><span class="rvts42"> c </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Celsius to Kelvin.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">f_c(</span></span><span class="rvts0"><span class="rvts42"> f </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Fahrenheit to Celsius.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">f_k(</span></span><span class="rvts0"><span class="rvts42"> f </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Fahrenheit to Kelvin.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">k_c(</span></span><span class="rvts0"><span class="rvts42"> k </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps28"><span class="rvts39">converts Kelvin to Celsius.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts41">k_f(</span></span><span class="rvts0"><span class="rvts42"> k </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps32"><span class="rvts39">converts Kelvin to Fahrenheit.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,94 @@
+﻿<html>
+	
+<head>
+	<title>Constants and Variables dialog</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Constants, Variables, Temporary, Calculation Field, Pattern, Permanent">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ConstantsandVariablesdialog");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Constants and Variables dialog</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="UserInterface.html">User Interface</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="UserInterface.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Preferences.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Calculations.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Constants and Variables dialog</span></span></h3>
+<p class="rvps4"><span class="rvts6">To add a </span><span class="rvts11">constant</span><span class="rvts6"> or a </span><span class="rvts11">variable</span><span class="rvts6">, write an assignment by defined </span><span class="rvts11">Pattern</span><span class="rvts6"> (the image below - </span><span class="rvts11">3</span><span class="rvts6">) and press Enter (Return). If assignment is valid, it will appear in the list checked - as a </span><span class="rvts11">permanent</span><span class="rvts6">. Adding </span><span class="rvts11">temporary</span><span class="rvts6"> (unchecked) variable is also available by </span><span class="rvts11">Calculation Field </span><span class="rvts6">(see </span><a class="rvts15" href="Constantsandvariables.html">Constants and variables</a><span class="rvts6"> - "Variable assignment").</span></p>
+<p class="rvps4"><span class="rvts11">Permanent</span><span class="rvts6"> constants and variables (the image below - </span><span class="rvts11">b</span><span class="rvts6">) are saved and available across different sessions, unlike </span><span class="rvts11">temporary</span><span class="rvts6"> (unchecked) ones, which are only available for current session, and get removed after Exit. So, if you have an expression in History with some temporary variables, and want to reuse it, that variables will be no longer recognized, and an error message will appear instead. That's why it's highly recommended to make an assignment of temporary variable by </span><span class="rvts11">Calculation Field </span><span class="rvts6">(see </span><a class="rvts15" href="Constantsandvariables.html">Constants and variables</a><span class="rvts6"> - "Variable assignment"), thereby having the chance to find later the assignment of the missing variable in History.</span></p>
+<p class="rvps4"><span class="rvts11">Temporary</span><span class="rvts6"> variables (the image below - </span><span class="rvts11">c</span><span class="rvts6">) can always be checked within the session, before Exit, becoming so </span><span class="rvts11">permanent</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6">All items in list, except </span><span class="rvts11">built-ins</span><span class="rvts6"> constants (the image below - </span><span class="rvts11">a</span><span class="rvts6">), can be removed by context menu or </span><span class="rvts11">Delete</span><span class="rvts6"> keyboard key.</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/constvars_en.png"></p>
+<p class="rvps12"><span class="rvts23">Constants and Variables</span><span class="rvts16"> dialog.</span></p>
+<p class="rvps13"><span class="rvts25">1. Input Field</span><span class="rvts24"> - see </span><span class="rvts33">Pattern</span><span class="rvts24"> to add constant or variable,&nbsp;</span><span class="rvts25"> 2. Constants and Variables list</span><span class="rvts24">,&nbsp;</span><span class="rvts25"> 3. Status and Pattern</span><span class="rvts24"> - shows also errors, &nbsp;</span><span class="rvts25">4. Note</span><span class="rvts24">.</span></p>
+<p class="rvps18"><span class="rvts25">a) Built-in constants</span><span class="rvts24"> - locked, &nbsp;</span><span class="rvts25">b) Permanent </span><span class="rvts24">- checked, &nbsp;</span><span class="rvts25">c) Temporary</span><span class="rvts24"> - unchecked (will be removed after Exit).</span></p>
+<h5 class="rvps17"><span class="rvts0"><span class="rvts32">Pattern</span></span></h5>
+<p class="rvps4"><span class="rvts6">The valid characters for </span><span class="rvts11">name</span><span class="rvts6"> input are the uppercase and lowercase letters, the underscore "_", and, except for the first character, the digits 0 through 9 (maximum length is in parentheses).</span></p>
+<p class="rvps4"><span class="rvts6">The valid numbers for </span><span class="rvts11">value</span><span class="rvts6"> input are integers, decimal, binary, octal and hexadecimal numbers (maximum length is in parentheses).</span></p>
+<p class="rvps8"><span class="rvts12">See </span><a class="rvts34" href="Calculations.html">Calculations</a><span class="rvts12"> - "Lexical analysis" for more information.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

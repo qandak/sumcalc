@@ -1,0 +1,95 @@
+﻿<html>
+	
+<head>
+	<title>Quick Guide</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Python, , Autocopy, , , History, Mode, , , Calculation Field, User Interface, Global Shortcut Key">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("QuickGuide");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Quick Guide</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="UserInterface.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Introduction</span></span></h3>
+<p class="rvps4"><span class="rvts6">The name </span><span class="rvts11">SUM</span><span class="rvts6"> does not indicate well known mathematical operation of addition. It's just an abbreviation of imperative request - </span><span class="rvts11">Stop Using Mouse! </span><span class="rvts6">(...at least in calculations).</span></p>
+<p class="rvps4"><span class="rvts11">SUM</span><span class="rvts6"> is an easy to use yet powerful and intuitive cross-platform </span><span class="rvts11">"one-line"</span><span class="rvts6"> calculator with history. It provides a clear and minimalistic </span><a class="rvts15" href="UserInterface.html">User Interface</a><span class="rvts6"> to quickly compose calculation expressions in arbitrary length and depth.</span></p>
+<p class="rvps4"><span class="rvts6">The calculation engine is based on </span><a class="rvts13" href="http://www.python.org/" target="_blank">Python</a><span class="rvts6"> interpreter (see </span><span class="rvts12">About</span><span class="rvts6"> in main Menu</span><span class="rvts12"> </span><span class="rvts6">for Python version).</span></p>
+<p class="rvps4"><span class="rvts6">One of key features of </span><span class="rvts11">SUM</span><span class="rvts6"> is system-wide </span><span class="rvts14">Global Shortcut Key</span><span class="rvts6">, activating (or bringing to top) and minimizing </span><span class="rvts11">SUM</span><span class="rvts6"> by keyboard. The advantage of </span><span class="rvts12">Global Shortcut Key</span><span class="rvts6"> is more significant if the keyboard has a Numeric keypad. See </span><a class="rvts15" href="Preferences.html">Preferences</a><span class="rvts6"> to set up </span><span class="rvts12">Global Shortcut Key</span><span class="rvts6">.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">Calculations</span></span></h3>
+<p class="rvps4"><span class="rvts11">SUM</span><span class="rvts6"> uses one-line syntax for calculation expressions, so composition of any nested element, subexpression and non-literal math symbol must be done using parentheses.</span></p>
+<p class="rvps4"><span class="rvts6">In the example below </span><span class="rvts11">"square root"</span><span class="rvts6"> symbol translated to </span><span class="rvts11">sqrt( )</span><span class="rvts6"> function (see </span><a class="rvts15" href="Functionslist.html">Functions list</a><span class="rvts6"> topic for all functions), which takes nested expression as an argument. Variable </span><span class="rvts11">x</span><span class="rvts6"> here must be predefined by user, unlike </span><span class="rvts11">pi</span><span class="rvts6"> (</span><span class="rvts17">π</span><span class="rvts6">), which is a built-in constant (see </span><a class="rvts15" href="Constantsandvariables.html">Constants and variables</a><span class="rvts6">).</span></p>
+<p class="rvps4"><span class="rvts6">Once calculation is done, it is automatically appended to History (if </span><span class="rvts11">Add to History</span><span class="rvts6"> check-box is not unchecked in </span><a class="rvts15" href="Preferences.html">Preferences</a><span class="rvts6">), and the result is copied to the clipboard (if </span><span class="rvts11">Autocopy result</span><span class="rvts6"> option is not Off).</span></p>
+<p class="rvps4"><span class="rvts6">See </span><a class="rvts15" href="Calculations.html">Calculations</a><span class="rvts6"> topic for more information.</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/comp_en_bw.png" onmouseover="this.src='lib/comp_en_cl.png';" onmouseout="this.src='lib/comp_en_bw.png';"></p>
+<p class="rvps7"><span class="rvts16">Translation of mathematical expression into one-line expression for SUM.</span></p>
+<p class="rvps5"><span class="rvts19">Hover over the image to visually highlight the translation.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">User Interface</span></span></h3>
+<p class="rvps4"><span class="rvts6">History is closed by default. It can be open either by corresponding button or </span><span class="rvts11">Ctrl-H</span><span class="rvts6"> shortcut key. See </span><a class="rvts15" href="UserInterface.html">User Interface</a><span class="rvts6"> for </span><span class="rvts11">History Mode</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts11">Up</span><span class="rvts6"> and</span><span class="rvts11"> Down </span><span class="rvts6">keyboard keys move respectively back and forth through the History. Moving through History is not available in </span><span class="rvts11">Edit</span><span class="rvts6"> state (see </span><a class="rvts15" href="UserInterface.html">User Interface</a><span class="rvts6"> - "Calculation Field and History"), to prevent user losing already composed expression with </span><span class="rvts11">Up</span><span class="rvts6"> key by mistake. History items can be deleted selectively or cleared-up by corresponding option in </span><a class="rvts15" href="Preferences.html">Preferences</a><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6">There is no need to recalculate an expression, which is already in History, to copy the result. Once held on required item, just press </span><span class="rvts11">Ctrl-C</span><span class="rvts6"> to copy the expression (if Calculation Field has a selection, selected text will be copied instead) or </span><span class="rvts11">Ctrl-R</span><span class="rvts6"> to copy the result. See </span><a class="rvts15" href="Shortcutkeys.html">Shortcut keys</a><span class="rvts6"> topic for all shortcut keys.</span></p>
+<p class="rvps4"><span class="rvts6">The indicator at the right of the title on Title bar surrounding by square brackets shows the current angle units for trigonometric function. Two possible units are available - </span><span class="rvts11">degrees</span><span class="rvts6"> (by default) and </span><span class="rvts11">radians</span><span class="rvts6">.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">More help</span></span></h3>
+<p class="rvps8"><span class="rvts18">Choose a topic from the left menu for more help.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

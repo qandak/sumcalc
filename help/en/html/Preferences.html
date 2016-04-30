@@ -1,0 +1,103 @@
+﻿<html>
+	
+<head>
+	<title>Preferences</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", Preferences, Menu, Language, Resolution, , , System, , , History, Scientific Notation, Constants, Degrees, Radians, Reformat, Exit, Minimized, , Global Shortcut Key, Reset, NumLock">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Preferences");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Preferences</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="UserInterface.html">User Interface</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="UserInterface.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="UserInterface.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="ConstantsandVariablesdialog.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Preferences</span></span></h3>
+<p class="rvps4"><span class="rvts11">Preferences</span><span class="rvts6"> window can be open either by </span><span class="rvts12">Menu - Preferences...</span><span class="rvts6"> or </span><span class="rvts11">Ctrl-P</span><span class="rvts6"> shortcut key. This windows is </span><span class="rvts12">locking</span><span class="rvts6">, so the main window is unavailable for manipulations at the same time.</span></p>
+<p class="rvps4"><span class="rvts6">Two options are available to close </span><span class="rvts11">Preferences</span><span class="rvts6"> window: accepting and refusing changes by OK and Cancel buttons, respectively.</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/prefs_en.png"></p>
+<p class="rvps5"><span class="rvts23">Preferences</span><span class="rvts16"> window.</span></p>
+<h5 class="rvps17"><span class="rvts0"><span class="rvts32">User interface</span></span></h5>
+<p class="rvps4"><span class="rvts29">Language: </span><span class="rvts28">change UI language by drop-down menu (the language is set according System Local at the </span><span class="rvts31">First Start</span><span class="rvts28"> - English is default, if no language found).</span></p>
+<p class="rvps4"><span class="rvts29">Resolution:</span><span class="rvts28"> change UI resolution from </span><span class="rvts31">Native</span><span class="rvts28"> to </span><span class="rvts31">Double</span><span class="rvts28"> by drop-down menu (</span><span class="rvts30">Double</span><span class="rvts28"> is recommended if screen resolution is UltraHD or higher).</span></p>
+<h5 class="rvps17"><span class="rvts0"><span class="rvts32">Calculations</span></span></h5>
+<p class="rvps4"><span class="rvts29">Large integer result in Scientific Notation: </span><span class="rvts28">uncheck if large integer </span><span class="rvts29">result</span><span class="rvts28"> in natural representation (15013093754529657235677197216425...) is more suitable than scientific notation (1.5013093754529656e+68).</span></p>
+<p class="rvps4"><span class="rvts29">Constants:</span><span class="rvts28"> open Constants and Variables dialog, to create change or remove constants and variables (see </span><a class="rvts15" href="ConstantsandVariablesdialog.html">Constants and Variables dialog</a><span class="rvts28">).</span></p>
+<p class="rvps4"><span class="rvts29">Degrees / Radians:</span><span class="rvts28"> change angle units in trigonometry.</span></p>
+<h5 class="rvps17"><span class="rvts0"><span class="rvts32">History</span></span></h5>
+<p class="rvps4"><span class="rvts29">Reformat expression in History: </span><span class="rvts28">SUM is formating by default all expressions in History - adding spaces around "+", "-", "/" operators and between arguments, removing extra spaces, and adding zeros omitted before floating point (i.e ".25").</span></p>
+<p class="rvps4"><span class="rvts29">Expressions in History:</span><span class="rvts28"> set maximum number of History items - default is </span><span class="rvts29">100</span><span class="rvts28">, maximum is </span><span class="rvts29">250</span><span class="rvts28">,</span><span class="rvts29"> 0</span><span class="rvts28"> will clear up History and expressions will not be added (if actual number of items in History exceeding maximum, overrun items will be removed from the end).</span></p>
+<p class="rvps4"><span class="rvts29">Add to History:</span><span class="rvts28"> uncheck if don't want to add the following expressions to History (remaining items will not be affected).</span></p>
+<p class="rvps4"><span class="rvts29">Clear History on Exit:</span><span class="rvts28"> if checked, all History will be cleared up after Exit.</span></p>
+<p class="rvps4"><span class="rvts29">Clear History: </span><span class="rvts28">clear up all History.</span></p>
+<p class="rvps4"><span class="rvts28"><br/></span></p>
+<p class="rvps4"><span class="rvts29">Start Minimized:</span><span class="rvts28"> check to start up silently, if SUM is starting with System (autostart should be set by system-specific tools, for example - copying program shortcut to Startup folder in Windows).</span></p>
+<p class="rvps4"><span class="rvts29">Global Shortcut Key:</span><span class="rvts28"> select system-wide </span><span class="rvts30">Global Shortcut Key</span><span class="rvts28"> to </span><span class="rvts6">activate (at any inactive state) and minimize SUM by keyboard, if there is neither </span><span class="rvts11">NumLock</span><span class="rvts6"> key nor </span><span class="rvts11">Numeric keypad</span><span class="rvts6"> on your keyboard, you should choose one of combinations with </span><span class="rvts11">Ctrl</span><span class="rvts6"> and </span><span class="rvts11">F2 </span><span class="rvts6">- </span><span class="rvts11">F12</span><span class="rvts6"> keys (note: if </span><span class="rvts11">NumLock</span><span class="rvts6"> key is chosen, </span><span class="rvts12">NumLock</span><span class="rvts6"> state will be always </span><span class="rvts11">On</span><span class="rvts6">.).</span></p>
+<p class="rvps8"><span class="rvts11">Reset All:</span><span class="rvts6"> Reset all Preferences as well as user defined main window's size and position.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

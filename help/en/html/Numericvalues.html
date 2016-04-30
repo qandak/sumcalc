@@ -1,0 +1,94 @@
+﻿<html>
+	
+<head>
+	<title>Numeric values</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", Scientific Notation, Integers, Decimals, Binary, Octal, Hexadecimal">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Numericvalues");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Numeric values</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Calculations.html">Calculations</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Calculations.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Functions.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Operatorsanddelimiters.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Numeric values</span></span></h3>
+<p class="rvps4"><span class="rvts6">Calculation </span><span class="rvts11">result</span><span class="rvts6"> is generally a numeric value, except the result of some converter functions, which have a result by more than one value, so are represented by a </span><span class="rvts12">reverse</span><span class="rvts6"> function.</span></p>
+<p class="rvps4"><span class="rvts6">Both </span><span class="rvts12">integers</span><span class="rvts6"> and </span><span class="rvts12">decimals</span><span class="rvts6"> can be either written or represented in </span><span class="rvts29">Scientific Notation</span><span class="rvts28"> (i.e. 1.5013093754529656e+68).</span></p>
+<h5 class="rvps25"><span class="rvts0"><span class="rvts37">Integers</span></span></h5>
+<p class="rvps4"><span class="rvts28">Integers are limited only by System memory, nevertheless SUM stops calculation before it </span><span class="rvts29">overflows</span><span class="rvts28"> the memory or CPU.</span></p>
+<p class="rvps4"><span class="rvts28">Large integer </span><span class="rvts29">result</span><span class="rvts28"> is represented in </span><span class="rvts29">Scientific Notation</span><span class="rvts28"> by default. To disable that option, uncheck "</span><span class="rvts30">Large integer result in Scientific Notation</span><span class="rvts28">" in </span><a class="rvts15" href="Preferences.html">Preferences</a><span class="rvts28"> - "Calculations" group.</span></p>
+<h5 class="rvps25"><span class="rvts0"><span class="rvts37">Decimals</span></span></h5>
+<p class="rvps4"><span class="rvts28">Decimals, also known as </span><span class="rvts31">floats</span><span class="rvts28"> or</span><span class="rvts29"> </span><span class="rvts31">floating point numbers</span><span class="rvts28">, are limited by 1.7976931348623157e</span><span class="rvts38">±</span><span class="rvts28">308. Anyway, decimal value </span><span class="rvts29">results</span><span class="rvts28"> in natural representation are rounded to </span><span class="rvts29">15 digits</span><span class="rvts28"> after floating point.</span></p>
+<p class="rvps4"><span class="rvts28">Unlike integers, </span><span class="rvts30">too </span><span class="rvts31">large</span><span class="rvts28"> and </span><span class="rvts30">too </span><span class="rvts31">small</span><span class="rvts28"> decimals are always represented in </span><span class="rvts29">Scientific Notation</span><span class="rvts28">.</span></p>
+<h5 class="rvps25"><span class="rvts0"><span class="rvts37">Binary, Octal, Hexadecimal</span></span></h5>
+<p class="rvps4"><span class="rvts28">Special types of </span><span class="rvts30">binary</span><span class="rvts28">, </span><span class="rvts30">octal</span><span class="rvts28"> and </span><span class="rvts30">hexadecimal</span><span class="rvts28"> values are defined by "</span><span class="rvts29">0b</span><span class="rvts28">...", "</span><span class="rvts29">0o</span><span class="rvts28">..." and "</span><span class="rvts29">0x</span><span class="rvts28">..." prefixes respectively. These special types can be used in any place of ordinary numeric values. The only exception of using special type is only one type allowed for the same expression.</span></p>
+<p class="rvps4"><span class="rvts28">Expressions with a special type value has a </span><span class="rvts29">result</span><span class="rvts28"> of the same type. If the </span><span class="rvts29">input</span><span class="rvts28"> consists of </span><span class="rvts29">a value</span><span class="rvts28"> of a special type, the decimal equivalent will be returned.</span></p>
+<p class="rvps8"><span class="rvts28">See also </span><span class="rvts31">bin</span><span class="rvts28">, </span><span class="rvts31">oct</span><span class="rvts28"> and </span><span class="rvts31">hex</span><span class="rvts28"> functions, to convert a decimal value to a special type.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

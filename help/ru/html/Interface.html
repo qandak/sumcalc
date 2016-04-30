@@ -1,0 +1,101 @@
+﻿<html>
+	
+<head>
+	<title>Интерфейс</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", , , , , , , , , , , , , , , , , , , , , Автозапуск, Автокопирование, Интерфейс, История, Кнопка, Вид, Меню, Поле Вычислений, Простой вид, Свернутое, Системный, Трей">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Interface");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Интерфейс</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="QuickGuide.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Preferences.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Интерфейс</span></span></h3>
+<p class="rvps4"><span class="rvts6">Главный интерфейс программы имеет два вида - </span><span class="rvts11">Простой</span><span class="rvts6"> (по умолчанию) и </span><span class="rvts11">с Историей</span><span class="rvts6">. Переход между двумя видами можно осуществить с помощью </span><span class="rvts11">кнопки История</span><span class="rvts6"> (изображения ниже - </span><span class="rvts11">б</span><span class="rvts6">) или комбинации клавиш </span><span class="rvts11">Ctrl-H</span><span class="rvts6"> (History). Для открытия и закрытия Истории можно воспользоваться также комбинацией клавиш </span><span class="rvts11">Ctrl-Вверх</span><span class="rvts6"> и </span><span class="rvts11">Ctrl-Вниз</span><span class="rvts6">, соответственно. Размеры главного окна можно легко изменить. В виде </span><span class="rvts11">с Историей</span><span class="rvts6"> можно изменить также вертикальный размер окна.</span></p>
+<p class="rvps4"><span class="rvts6">В </span><span class="rvts11">Поле Вычислений</span><span class="rvts6"> есть иконка показывающая состояние </span><span class="rvts11">Автокопирования</span><span class="rvts6"> (изображения ниже - </span><span class="rvts11">а</span><span class="rvts6">). </span><span class="rvts11">Автокопирование</span><span class="rvts6"> Включено, если иконка активна. Данное состояние можно изменить через главное </span><span class="rvts11">Меню</span><span class="rvts6"> (изображения ниже - &nbsp;</span><span class="rvts11">в</span><span class="rvts6">) или комбинацией клавиш </span><span class="rvts11">Ctrl-Shift-C</span><span class="rvts6"> (смотр. </span><a class="rvts15" href="Shortcutkeys.html">Клавишные комбинации</a><span class="rvts6">). Это может быть полезно в тех случаях, когда в буфере обмена есть важная информация.</span></p>
+<p class="rvps4"><span class="rvts6">Индикатор в квадратных скобках, после заголовка главного окна, показывает текущую единицу углов для тригонометрических функций. Возможны два варианта - </span><span class="rvts11">градусы</span><span class="rvts6"> (по умолчанию) и </span><span class="rvts11">радианы</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts11">SUM</span><span class="rvts6"> не может быть закрыта через кнопку-крестик </span><span class="rvts11">Закрыть</span><span class="rvts6">. Вместо этого она будет свернута в </span><span class="rvts11">Трей</span><span class="rvts6"> (место рядом с часами в Windows). Вернуть программу всегда можно через иконку в Трее, но все же намного удобнее пользоваться </span><span class="rvts14">Быстрой клавишей вызова</span><span class="rvts6"> (смотр. </span><a class="rvts15" href="Preferences.html">Настройки</a><span class="rvts6">). Для автозапуска с системой есть опция </span><span class="rvts11">Запустить в свернутом состоянии</span><span class="rvts6"> в </span><a class="rvts15" href="Preferences.html">Настройках</a><span class="rvts6">. Выход программы доступен через главное Меню или комбинацию клавиш.</span></p>
+<p class="rvps4"><span class="rvts6">Чтобы </span><span class="rvts11">Сбросить</span><span class="rvts6"> все настройки, а также размеры и расположение главного окна, воспользуйтесь соответствующей опцией в </span><a class="rvts15" href="Preferences.html">Настройках</a><span class="rvts6"> (состояние Истории, при этом, не измениться).</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/main_ru.png"></p>
+<p class="rvps5"><span class="rvts23">Простой вид</span><span class="rvts16"> - История закрыта, но доступна.</span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/main_hst_ru.png"></p>
+<p class="rvps12"><span class="rvts23">Вид с Историей</span><span class="rvts16"> - История открыта.</span></p>
+<p class="rvps13"><span class="rvts25">1. Заголовок окна</span><span class="rvts24"> - с индикатором единиц угла,&nbsp;</span><span class="rvts25"> 2. Поле Вычислений</span><span class="rvts24"> - состояние после завершения вычисления,&nbsp;</span><span class="rvts25"> 3. История</span><span class="rvts24"> - без выделенной записи.</span></p>
+<p class="rvps14"><span class="rvts25">а) Иконка Автокопирования</span><span class="rvts24"> - показывает состояние (Включено), &nbsp;</span><span class="rvts25">б) Кнопка История</span><span class="rvts24"> - нажата в открытом состоянии, &nbsp;</span><span class="rvts25">в) Кнопка Меню</span><span class="rvts24">.</span></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Поле Вычислений и История</span></span></h3>
+<p class="rvps4"><span class="rvts11">Поле Вычислений</span><span class="rvts6"> имеет постоянный фокус ввода, если главное окно активно. Это значит - любая комбинация клавиш повлияет также на </span><span class="rvts11">Поле Вычислений</span><span class="rvts6">. Данное поле имеет два неявных состояния - </span><span class="rvts11">Свободное</span><span class="rvts6"> и </span><span class="rvts11">Редактирования</span><span class="rvts6">, и определяются они в основном вводом пользователя.</span></p>
+<p class="rvps4"><span class="rvts6">После того, как пользователь напечатал/удалил символ или отредактировал текст в Поле Вычислений, оно переходит в состояние </span><span class="rvts11">Редактирования</span><span class="rvts6">, и перемещение по Истории становится недоступным. В случае </span><span class="rvts11">пустого</span><span class="rvts6"> поля ввода, а также после </span><span class="rvts11">завершения</span><span class="rvts6"> вычисления, состояние </span><span class="rvts11">Свободное</span><span class="rvts6">, и История доступна с помощью клавиши </span><span class="rvts11">Вверх</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6">Для </span><span class="rvts11">Поля Вычисления</span><span class="rvts6"> по умолчанию доступны стандартные операции текстового поля, а также стандартное контекстное меню. В дополнение к ним, есть несколько пользовательских комбинаций клавиш.</span></p>
+<p class="rvps15"><span class="rvts26">Вверх</span><span class="rvts27"> - вверх (назад) по списку историй (перейти в Историю в </span><span class="rvts26">Свободном</span><span class="rvts27"> состоянии),</span></p>
+<p class="rvps15"><span class="rvts26">Вниз</span><span class="rvts27"> - вниз (вперед) по списку историй,</span></p>
+<p class="rvps15"><span class="rvts26">Ctrl-C</span><span class="rvts27"> - копирование выражения текущей записи в Истории (если в Поле Вычисления есть выделение - будет скопирован выделенный фрагмент),</span></p>
+<p class="rvps15"><span class="rvts26">Ctrl-R </span><span class="rvts27">- копирование результата текущей записи в Истории,</span></p>
+<p class="rvps15"><span class="rvts26">Ctrl-S </span><span class="rvts27">- сохранение Истории (при выходе из программы сохраняется автоматически),</span></p>
+<p class="rvps15"><span class="rvts26">Del</span><span class="rvts27"> - удаление текущую запись в Истории (основная операция - удаление текста),</span></p>
+<p class="rvps16"><span class="rvts27">etc.</span></p>
+<p class="rvps8"><span class="rvts6">Смотр. все </span><span class="rvts15">Клавишные комбинации</span><span class="rvts6">.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

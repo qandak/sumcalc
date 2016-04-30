@@ -1,0 +1,86 @@
+﻿<html>
+	
+<head>
+	<title>Ошибки</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", Ошибки">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Errors");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Ошибки</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Calculations.html">Вычисления</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Calculations.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Operatorsanddelimiters.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Functionslist.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Ошибки</span></span></h3>
+<p class="rvps4"><span class="rvts6">Во время вычисления могут произойти </span><span class="rvts11">разного</span><span class="rvts6"> рода ошибки. В большинстве случаев, при </span><span class="rvts11">ошибке ввода</span><span class="rvts6">, </span><span class="rvts11">математической ошибки</span><span class="rvts6"> или специфической </span><span class="rvts11">ошибки аргумента</span><span class="rvts6">, пользователь оповещается всплывающей подсказкой как в примере ниже (смотр. другой пример ошибки в разделе </span><a class="rvts15" href="Functions.html">Функции</a><span class="rvts6">).</span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/syntaxerror_ru.png"></p>
+<p class="rvps5"><span class="rvts16">Сообщение </span><span class="rvts23">ошибки ввода</span><span class="rvts16">.</span></p>
+<p class="rvps8"><span class="rvts6">В случае непредвиденной ошибки, в папке с программой будет создан файл «</span><span class="rvts11">error.log»</span><span class="rvts6">, который можно отправить как баг-репорт (смотр. раздел </span><a class="rvts15" href="AboutSUM.html">О программе</a><span class="rvts6"> или </span><span class="rvts12">О программе</span><span class="rvts6"> в Меню).</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

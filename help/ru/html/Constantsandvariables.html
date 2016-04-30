@@ -1,0 +1,95 @@
+﻿<html>
+	
+<head>
+	<title>Константы и переменные</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", , , , , Временное, Константа, Переменная, Поле Вычислений, Постоянное">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Constantsandvariables");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Константы и переменные</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Calculations.html">Вычисления</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Calculations.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Calculations.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Functions.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Константы и переменные</span></span></h3>
+<p class="rvps4"><span class="rvts6">Константы и переменные могут быть </span><span class="rvts14">постоянными</span><span class="rvts6"> - через сессии, </span><span class="rvts14">временными</span><span class="rvts6"> - в рамках текущей сессии, и </span><span class="rvts14">встроенными</span><span class="rvts6"> - недоступные для редактирования и удаления.</span></p>
+<p class="rvps4"><span class="rvts14">Постоянные</span><span class="rvts12"> </span><span class="rvts6">константы и переменные следует добавлять через </span><a class="rvts15" href="ConstantsandVariablesdialog.html">диалог Константы и Переменные</a><span class="rvts6">. Таким образом, они появляются в списке уже отмеченными.</span></p>
+<p class="rvps4"><span class="rvts14">Временные</span><span class="rvts6"> переменные, напротив, следует назначать через </span><span class="rvts11">Поле Вычислений</span><span class="rvts6"> (смотр. «Назначение переменной» ниже)ю Таким образом, они появляются в списке неотмеченными.</span></p>
+<p class="rvps4"><span class="rvts6">В любом случае, оба типа могут быть переведены в другой, с помощью отметки. Обратите внимание, что временные переменные должны быть отмечены в рамках текущей сессии, так как все неотмеченные поля удаляются при выходы программы.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">Назначение переменной</span></span></h3>
+<p class="rvps4"><span class="rvts11">Временные</span><span class="rvts6"> переменные очень удобные. Они могут быть назначены прямо в </span><span class="rvts11">Поле Вычислений</span><span class="rvts6"> и удалены при выходе из программы, так как добавляются в список всегда неотмеченными.</span></p>
+<p class="rvps4"><span class="rvts6">В отличие от констант и переменных добавленных через соответствующий диалог, к переменной могут быть назначены </span><span class="rvts11">не только</span><span class="rvts6"> числовые значения, но и любые </span><span class="rvts11">выражения</span><span class="rvts6">. Разница в том, что если добавить имя переменной со знаком равенства перед выражением, то вместо вычисления произойдет назначение. А вместо выражения с результатом, в Историю добавится назначение.</span></p>
+<p class="rvps4"><span class="rvts6">Этим же способом временные переменные могут быть обновлены. Соответствующее сообщение будет показано</span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/assign_ru.png"></p>
+<p class="rvps20"><span class="rvts16">Назначение </span><span class="rvts23">составлено</span><span class="rvts16">.</span></p>
+<p class="rvps21"><img alt="" style="padding : 1px;" src="lib/assign_done_ru.png"></p>
+<p class="rvps5"><span class="rvts16">Назначение </span><span class="rvts23">завершено</span><span class="rvts16">.</span></p>
+<p class="rvps8"><span class="rvts6">Так или иначе, </span><span class="rvts11">временные</span><span class="rvts6"> переменные могут быть переведены в </span><span class="rvts11">постоянные</span><span class="rvts6">, если отметить их в </span><a class="rvts15" href="ConstantsandVariablesdialog.html">диалоге Константы и Переменные</a><span class="rvts6"> перед тем как выйти из программы.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

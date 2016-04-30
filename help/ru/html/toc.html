@@ -1,0 +1,687 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>SUM Калькулятор - Справка- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		window.bSearchDataLoaded = false;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				}
+			
+			// Load search data
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = 'js/hndsd.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				$("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId).activateSilently();
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			if (!window.bSearchDataLoaded) {
+				$("#search_results").html("Search engine data hasn't been fully loaded yet or an error occurred while loading it. This usually happens when documentation is browsed locally.");
+				return;
+			}
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					if (oSearchEngine.aResults[nCnt][0] < aTl.length)
+					{
+						oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt][0]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt][0]][1]) + "</a></li>");
+					}
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-toc">Содержание</a></li>
+			<li><a href="#tab-keywords">Индекс</a></li>
+			<li><a href="#tab-search">Поиск</a></li>
+			</ul>
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				<li class="" id="QuickGuide" data="icon: '18.png'">
+							<a
+							href="QuickGuide.html"
+							target="FrameMain">
+								Краткое Руководство</a>
+
+				</li><li class="folder" id="Interface" data="">
+							<a
+							href="Interface.html"
+							target="FrameMain">
+								Интерфейс</a>
+
+				<ul><li class="" id="Preferences" data="icon: '10.png'">
+							<a
+							href="Preferences.html"
+							target="FrameMain">
+								Настройки</a>
+
+				</li><li class="" id="ConstantsandVariablesdialog" data="icon: '10.png'">
+							<a
+							href="ConstantsandVariablesdialog.html"
+							target="FrameMain">
+								Диалог Константы и Переменные</a>
+
+				</li></ul></li><li class="folder" id="Calculations" data="">
+							<a
+							href="Calculations.html"
+							target="FrameMain">
+								Вычисления</a>
+
+				<ul><li class="" id="Constantsandvariables" data="icon: '10.png'">
+							<a
+							href="Constantsandvariables.html"
+							target="FrameMain">
+								Константы и переменные</a>
+
+				</li><li class="" id="Functions" data="icon: '10.png'">
+							<a
+							href="Functions.html"
+							target="FrameMain">
+								Функции</a>
+
+				</li><li class="" id="Numericvalues" data="icon: '10.png'">
+							<a
+							href="Numericvalues.html"
+							target="FrameMain">
+								Числовые значения</a>
+
+				</li><li class="" id="Operatorsanddelimiters" data="icon: '10.png'">
+							<a
+							href="Operatorsanddelimiters.html"
+							target="FrameMain">
+								Операторы и разделители</a>
+
+				</li><li class="" id="Errors" data="icon: '10.png'">
+							<a
+							href="Errors.html"
+							target="FrameMain">
+								Ошибки</a>
+
+				</li></ul></li><li class="" id="Functionslist" data="icon: '10.png'">
+							<a
+							href="Functionslist.html"
+							target="FrameMain">
+								Список функций</a>
+
+				</li><li class="" id="Shortcutkeys" data="icon: '10.png'">
+							<a
+							href="Shortcutkeys.html"
+							target="FrameMain">
+								Клавишные комбинации</a>
+
+				</li><li class="" id="AboutSUM" data="icon: '10.png'">
+							<a
+							href="AboutSUM.html"
+							target="FrameMain">
+								О программе</a>
+
+				</li></ul>
+		</div>
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				<li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								NumLock</a>
+
+				</li><li class="file" data="click:'[[\'Краткое Руководство\',\'QuickGuide.html\'],[\'Вычисления\',\'Calculations.html\'],[\'О программе\',\'AboutSUM.html\']]'">
+							<a
+								href="QuickGuide.html"
+								target="FrameMain"
+								onClick="[['Краткое Руководство','QuickGuide.html'],['Вычисления','Calculations.html'],['О программе','AboutSUM.html']]"
+								>
+								Python</a>
+
+				</li><li class="file" data="click:'[[\'Краткое Руководство\',\'QuickGuide.html\'],[\'Интерфейс\',\'Interface.html\']]'">
+							<a
+								href="QuickGuide.html"
+								target="FrameMain"
+								onClick="[['Краткое Руководство','QuickGuide.html'],['Интерфейс','Interface.html']]"
+								>
+								Автозапуск</a>
+
+				</li><li class="file" data="click:'[[\'Краткое Руководство\',\'QuickGuide.html\'],[\'Интерфейс\',\'Interface.html\'],[\'Вычисления\',\'Calculations.html\']]'">
+							<a
+								href="QuickGuide.html"
+								target="FrameMain"
+								onClick="[['Краткое Руководство','QuickGuide.html'],['Интерфейс','Interface.html'],['Вычисления','Calculations.html']]"
+								>
+								Автокопирование</a>
+
+				</li><li class="file" data="click:'[[\'Краткое Руководство\',\'QuickGuide.html\'],[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="QuickGuide.html"
+								target="FrameMain"
+								onClick="[['Краткое Руководство','QuickGuide.html'],['Настройки','Preferences.html']]"
+								>
+								Быстрая клавиша вызова</a>
+
+				</li><li class="file" data="click:'[[\'Вычисления\',\'Calculations.html\'],[\'Числовые значения\',\'Numericvalues.html\']]'">
+							<a
+								href="Calculations.html"
+								target="FrameMain"
+								onClick="[['Вычисления','Calculations.html'],['Числовые значения','Numericvalues.html']]"
+								>
+								Восьмеричные</a>
+
+				</li><li class="file" data="click:'[[\'Диалог Константы и Переменные\',\'ConstantsandVariablesdialog.html\'],[\'Константы и переменные\',\'Constantsandvariables.html\']]'">
+							<a
+								href="ConstantsandVariablesdialog.html"
+								target="FrameMain"
+								onClick="[['Диалог Константы и Переменные','ConstantsandVariablesdialog.html'],['Константы и переменные','Constantsandvariables.html']]"
+								>
+								Временное</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								Выход</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								Градусы</a>
+
+				</li><li class="file" data="click:'[[\'Вычисления\',\'Calculations.html\'],[\'Числовые значения\',\'Numericvalues.html\']]'">
+							<a
+								href="Calculations.html"
+								target="FrameMain"
+								onClick="[['Вычисления','Calculations.html'],['Числовые значения','Numericvalues.html']]"
+								>
+								Двоичный</a>
+
+				</li><li class="file" data="click:'[[\'Числовые значения\',\'Numericvalues.html\']]'">
+							<a
+								href="Numericvalues.html"
+								target="FrameMain"
+								onClick="[['Числовые значения','Numericvalues.html']]"
+								>
+								Десятичный</a>
+
+				</li><li class="file" data="click:'[[\'Вычисления\',\'Calculations.html\']]'">
+							<a
+								href="Calculations.html"
+								target="FrameMain"
+								onClick="[['Вычисления','Calculations.html']]"
+								>
+								Идентификаторы</a>
+
+				</li><li class="file" data="click:'[[\'Краткое Руководство\',\'QuickGuide.html\'],[\'Интерфейс\',\'Interface.html\']]'">
+							<a
+								href="QuickGuide.html"
+								target="FrameMain"
+								onClick="[['Краткое Руководство','QuickGuide.html'],['Интерфейс','Interface.html']]"
+								>
+								Интерфейс</a>
+
+				</li><li class="folder" data="click:'[[\'Краткое Руководство\',\'QuickGuide.html\'],[\'Интерфейс\',\'Interface.html\'],[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="QuickGuide.html"
+								target="FrameMain"
+								onClick="[['Краткое Руководство','QuickGuide.html'],['Интерфейс','Interface.html'],['Настройки','Preferences.html']]"
+								>
+								История</a>
+
+				<ul><li class="file" data="click:'[[\'Краткое Руководство\',\'QuickGuide.html\'],[\'Интерфейс\',\'Interface.html\']]'">
+							<a
+								href="QuickGuide.html"
+								target="FrameMain"
+								onClick="[['Краткое Руководство','QuickGuide.html'],['Интерфейс','Interface.html']]"
+								>
+								Вид</a>
+
+				</li><li class="file" data="click:'[[\'Интерфейс\',\'Interface.html\']]'">
+							<a
+								href="Interface.html"
+								target="FrameMain"
+								onClick="[['Интерфейс','Interface.html']]"
+								>
+								Кнопка</a>
+
+				</li></ul></li><li class="file" data="click:'[[\'Клавишные комбинации\',\'Shortcutkeys.html\']]'">
+							<a
+								href="Shortcutkeys.html"
+								target="FrameMain"
+								onClick="[['Клавишные комбинации','Shortcutkeys.html']]"
+								>
+								Комбинация клавиш</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\'],[\'Диалог Константы и Переменные\',\'ConstantsandVariablesdialog.html\'],[\'Вычисления\',\'Calculations.html\'],[\'Константы и переменные\',\'Constantsandvariables.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html'],['Диалог Константы и Переменные','ConstantsandVariablesdialog.html'],['Вычисления','Calculations.html'],['Константы и переменные','Constantsandvariables.html']]"
+								>
+								Константа</a>
+
+				</li><li class="file" data="click:'[[\'Интерфейс\',\'Interface.html\'],[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Interface.html"
+								target="FrameMain"
+								onClick="[['Интерфейс','Interface.html'],['Настройки','Preferences.html']]"
+								>
+								Меню</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								Настройки</a>
+
+				</li><li class="file" data="click:'[[\'Вычисления\',\'Calculations.html\'],[\'Операторы и разделители\',\'Operatorsanddelimiters.html\']]'">
+							<a
+								href="Calculations.html"
+								target="FrameMain"
+								onClick="[['Вычисления','Calculations.html'],['Операторы и разделители','Operatorsanddelimiters.html']]"
+								>
+								Операторы</a>
+
+				</li><li class="file" data="click:'[[\'Ошибки\',\'Errors.html\']]'">
+							<a
+								href="Errors.html"
+								target="FrameMain"
+								onClick="[['Ошибки','Errors.html']]"
+								>
+								Ошибки</a>
+
+				</li><li class="file" data="click:'[[\'Диалог Константы и Переменные\',\'ConstantsandVariablesdialog.html\'],[\'Константы и переменные\',\'Constantsandvariables.html\']]'">
+							<a
+								href="ConstantsandVariablesdialog.html"
+								target="FrameMain"
+								onClick="[['Диалог Константы и Переменные','ConstantsandVariablesdialog.html'],['Константы и переменные','Constantsandvariables.html']]"
+								>
+								Переменная</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								Переформатирование</a>
+
+				</li><li class="file" data="click:'[[\'Краткое Руководство\',\'QuickGuide.html\'],[\'Интерфейс\',\'Interface.html\'],[\'Диалог Константы и Переменные\',\'ConstantsandVariablesdialog.html\'],[\'Вычисления\',\'Calculations.html\'],[\'Константы и переменные\',\'Constantsandvariables.html\']]'">
+							<a
+								href="QuickGuide.html"
+								target="FrameMain"
+								onClick="[['Краткое Руководство','QuickGuide.html'],['Интерфейс','Interface.html'],['Диалог Константы и Переменные','ConstantsandVariablesdialog.html'],['Вычисления','Calculations.html'],['Константы и переменные','Constantsandvariables.html']]"
+								>
+								Поле Вычислений</a>
+
+				</li><li class="file" data="click:'[[\'Диалог Константы и Переменные\',\'ConstantsandVariablesdialog.html\'],[\'Константы и переменные\',\'Constantsandvariables.html\']]'">
+							<a
+								href="ConstantsandVariablesdialog.html"
+								target="FrameMain"
+								onClick="[['Диалог Константы и Переменные','ConstantsandVariablesdialog.html'],['Константы и переменные','Constantsandvariables.html']]"
+								>
+								Постоянное</a>
+
+				</li><li class="file" data="click:'[[\'Функции\',\'Functions.html\']]'">
+							<a
+								href="Functions.html"
+								target="FrameMain"
+								onClick="[['Функции','Functions.html']]"
+								>
+								Предложения</a>
+
+				</li><li class="file" data="click:'[[\'Интерфейс\',\'Interface.html\']]'">
+							<a
+								href="Interface.html"
+								target="FrameMain"
+								onClick="[['Интерфейс','Interface.html']]"
+								>
+								Простой вид</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								Радианы</a>
+
+				</li><li class="file" data="click:'[[\'Операторы и разделители\',\'Operatorsanddelimiters.html\'],[\'Вычисления\',\'Calculations.html\']]'">
+							<a
+								href="Operatorsanddelimiters.html"
+								target="FrameMain"
+								onClick="[['Операторы и разделители','Operatorsanddelimiters.html'],['Вычисления','Calculations.html']]"
+								>
+								Разделители</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								Разрешение</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								Сбросить</a>
+
+				</li><li class="file" data="click:'[[\'Интерфейс\',\'Interface.html\'],[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Interface.html"
+								target="FrameMain"
+								onClick="[['Интерфейс','Interface.html'],['Настройки','Preferences.html']]"
+								>
+								Свернутое</a>
+
+				</li><li class="folder" data="click:'[[\'Интерфейс\',\'Interface.html\'],[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Interface.html"
+								target="FrameMain"
+								onClick="[['Интерфейс','Interface.html'],['Настройки','Preferences.html']]"
+								>
+								Системный</a>
+
+				<ul><li class="file" data="click:'[[\'Интерфейс\',\'Interface.html\']]'">
+							<a
+								href="Interface.html"
+								target="FrameMain"
+								onClick="[['Интерфейс','Interface.html']]"
+								>
+								Трей</a>
+
+				</li></ul></li><li class="file" data="click:'[[\'Функции\',\'Functions.html\']]'">
+							<a
+								href="Functions.html"
+								target="FrameMain"
+								onClick="[['Функции','Functions.html']]"
+								>
+								Справка</a>
+
+				</li><li class="folder" data="click:'[[\'Вычисления\',\'Calculations.html\'],[\'Функции\',\'Functions.html\'],[\'Список функций\',\'Functionslist.html\']]'">
+							<a
+								href="Calculations.html"
+								target="FrameMain"
+								onClick="[['Вычисления','Calculations.html'],['Функции','Functions.html'],['Список функций','Functionslist.html']]"
+								>
+								Функции</a>
+
+				<ul><li class="file" data="click:'[[\'Список функций\',\'Functionslist.html\']]'">
+							<a
+								href="Functionslist.html"
+								target="FrameMain"
+								onClick="[['Список функций','Functionslist.html']]"
+								>
+								Конвертация</a>
+
+				</li><li class="file" data="click:'[[\'Список функций\',\'Functionslist.html\']]'">
+							<a
+								href="Functionslist.html"
+								target="FrameMain"
+								onClick="[['Список функций','Functionslist.html']]"
+								>
+								Логарифмические</a>
+
+				</li><li class="file" data="click:'[[\'Список функций\',\'Functionslist.html\']]'">
+							<a
+								href="Functionslist.html"
+								target="FrameMain"
+								onClick="[['Список функций','Functionslist.html']]"
+								>
+								Специальные</a>
+
+				</li><li class="file" data="click:'[[\'Список функций\',\'Functionslist.html\']]'">
+							<a
+								href="Functionslist.html"
+								target="FrameMain"
+								onClick="[['Список функций','Functionslist.html']]"
+								>
+								Тригонометрические</a>
+
+				</li></ul></li><li class="file" data="click:'[[\'Числовые значения\',\'Numericvalues.html\']]'">
+							<a
+								href="Numericvalues.html"
+								target="FrameMain"
+								onClick="[['Числовые значения','Numericvalues.html']]"
+								>
+								Целые числа</a>
+
+				</li><li class="file" data="click:'[[\'Диалог Константы и Переменные\',\'ConstantsandVariablesdialog.html\']]'">
+							<a
+								href="ConstantsandVariablesdialog.html"
+								target="FrameMain"
+								onClick="[['Диалог Константы и Переменные','ConstantsandVariablesdialog.html']]"
+								>
+								Шаблон</a>
+
+				</li><li class="file" data="click:'[[\'Вычисления\',\'Calculations.html\'],[\'Числовые значения\',\'Numericvalues.html\']]'">
+							<a
+								href="Calculations.html"
+								target="FrameMain"
+								onClick="[['Вычисления','Calculations.html'],['Числовые значения','Numericvalues.html']]"
+								>
+								Шестнадцатеричный</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\'],[\'Числовые значения\',\'Numericvalues.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html'],['Числовые значения','Numericvalues.html']]"
+								>
+								Экспоненциальная запись</a>
+
+				</li><li class="file" data="click:'[[\'Настройки\',\'Preferences.html\']]'">
+							<a
+								href="Preferences.html"
+								target="FrameMain"
+								onClick="[['Настройки','Preferences.html']]"
+								>
+								Язык</a>
+
+				</li></ul>
+		</div>
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Поиск:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Поиск"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		</div>
+    
+</body>
+
+</html>
+

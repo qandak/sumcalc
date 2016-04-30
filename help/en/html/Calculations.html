@@ -1,0 +1,93 @@
+﻿<html>
+	
+<head>
+	<title>Calculations</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Python, Autocopy, Calculation Field, Constants, Binary, Octal, Hexadecimal, Delimiters, Operators, Identifiers, Functions">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Calculations");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Calculations</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="ConstantsandVariablesdialog.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Constantsandvariables.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Calculations</span></span></h3>
+<p class="rvps4"><span class="rvts6">The calculation engine is based on </span><a class="rvts13" href="http://www.python.org/" target="_blank">Python</a><span class="rvts6"> interpreter (see </span><span class="rvts12">About</span><span class="rvts6"> in main Menu</span><span class="rvts12"> </span><span class="rvts6">for Python version). So there is no cause for concern regarding calculations' truth.</span></p>
+<p class="rvps4"><span class="rvts11">SUM</span><span class="rvts6"> uses one-line syntax for calculation expressions, so composition of any nested element, subexpression and non-literal math symbol must be done using parentheses (see image below).</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/comp_en_bw.png" onmouseover="this.src='lib/comp_en_cl.png';" onmouseout="this.src='lib/comp_en_bw.png';"></p>
+<p class="rvps7"><span class="rvts16">Translation of mathematical expression into one-line expression for SUM.</span></p>
+<p class="rvps19"><span class="rvts19">Hover over the image to visually highlight the translation.</span></p>
+<p class="rvps4"><span class="rvts6">In this example </span><span class="rvts11">"square root"</span><span class="rvts6"> symbol translated to </span><span class="rvts11">sqrt( )</span><span class="rvts6"> function (see </span><a class="rvts15" href="Functionslist.html">Functions list</a><span class="rvts6"> topic for all functions), which takes nested expression as an argument. Variable </span><span class="rvts11">x</span><span class="rvts6"> here must be predefined by user, unlike </span><span class="rvts11">pi</span><span class="rvts6"> (</span><span class="rvts17">π</span><span class="rvts6">), which is a built-in constant (see </span><a class="rvts15" href="Constantsandvariables.html">Constants and variables</a><span class="rvts6">).</span></p>
+<p class="rvps4"><span class="rvts6">Once calculation is </span><span class="rvts11">done</span><span class="rvts6">, it is automatically appended to History (if </span><span class="rvts11">Add to History</span><span class="rvts6"> check-box is not unchecked in </span><a class="rvts15" href="Preferences.html">Preferences</a><span class="rvts6">), and the result is copied to the clipboard (if </span><span class="rvts11">Autocopy result</span><span class="rvts6"> option is not Off).</span></p>
+<p class="rvps4"><span class="rvts6">The </span><span class="rvts11">Calculation Filed</span><span class="rvts6"> has permanent focus for input, if the main window is active. It has two implicit states - </span><span class="rvts11">Edit</span><span class="rvts6"> and </span><span class="rvts11">Free</span><span class="rvts6">. These states are defined generally by user input: Once user typed/deleted a character or edited text in Calculation Field, the state turns to </span><span class="rvts11">Edit</span><span class="rvts6">. If a calculation is </span><span class="rvts11">done</span><span class="rvts6"> or the input field is </span><span class="rvts11">empty</span><span class="rvts6">, the state becomes </span><span class="rvts11">Free</span><span class="rvts6">.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">Lexical analysis</span></span></h3>
+<p class="rvps4"><span class="rvts6">All expressions in SUM is read by a parser. Input to the parser is a stream of tokens, generated by the lexical analyzer. If the expression cannot be decoded, an error is occurred.</span></p>
+<p class="rvps4"><span class="rvts6">These tokens are:</span></p>
+<p class="rvps4"><span class="rvts11">Identifiers</span><span class="rvts6"> - </span><span class="rvts12">names</span><span class="rvts6"> of </span><span class="rvts11">constants</span><span class="rvts6">, </span><span class="rvts11">variables</span><span class="rvts6"> and </span><span class="rvts11">functions</span><span class="rvts6">, valid characters of which are the uppercase and lowercase letters, the underscore "_" and, except for the first character, the digits 0 through 9 (see corresponding topic </span><a class="rvts15" href="Constantsandvariables.html">Constants and variables</a><span class="rvts6"> or </span><a class="rvts15" href="Functions.html">Functions</a><span class="rvts6">),</span></p>
+<p class="rvps4"><span class="rvts29">Numeric values</span><span class="rvts28"> - </span><span class="rvts29">integers</span><span class="rvts28">, </span><span class="rvts29">decimals</span><span class="rvts28"> (floating point numbers, floats) and special type values - </span><span class="rvts29">binary</span><span class="rvts28">, </span><span class="rvts29">octal</span><span class="rvts28">, </span><span class="rvts29">hexadecimal</span><span class="rvts28"> (see</span><span class="rvts6"> </span><a class="rvts15" href="Numericvalues.html">Numeric values</a><span class="rvts6"> topic),</span></p>
+<p class="rvps4"><span class="rvts29">Operators</span><span class="rvts28"> - &nbsp;+, &nbsp;-, &nbsp;*, &nbsp;**, &nbsp;/ and // (s</span><span class="rvts6">ee </span><a class="rvts15" href="Operatorsanddelimiters.html">Operators and delimiters</a><span class="rvts6"> topic),</span></p>
+<p class="rvps8"><span class="rvts29">Delimiters</span><span class="rvts28"> - opening and closing </span><span class="rvts29">parentheses</span><span class="rvts28"> "</span><span class="rvts29">( )</span><span class="rvts28">" and </span><span class="rvts29">comma</span><span class="rvts28"> "</span><span class="rvts29">,</span><span class="rvts28">" (s</span><span class="rvts6">ee </span><a class="rvts15" href="Operatorsanddelimiters.html">Operators and delimiters</a><span class="rvts6"> topic).</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

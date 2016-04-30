@@ -1,0 +1,94 @@
+﻿<html>
+	
+<head>
+	<title>Диалог Константы и Переменные</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", , , , , , Временное, Константа, Переменная, Поле Вычислений, Постоянное, Шаблон">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ConstantsandVariablesdialog");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Диалог Константы и Переменные</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Interface.html">Интерфейс</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Interface.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Preferences.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Calculations.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Диалог Константы и Переменные</span></span></h3>
+<p class="rvps4"><span class="rvts6">Чтобы добавить </span><span class="rvts11">константу</span><span class="rvts6"> или </span><span class="rvts11">переменную</span><span class="rvts6">, напишите назначение по Шаблону (изображение ниже - </span><span class="rvts11">3</span><span class="rvts6">) и нажмите Ввод (Enter). Если назначение допустимо, то оно появится в списке отмеченным - как </span><span class="rvts11">постоянное</span><span class="rvts6">. Добавление </span><span class="rvts11">временной</span><span class="rvts6"> (неотмеченной) переменной также возможно через </span><span class="rvts11">Поле Вычислений</span><span class="rvts6"> (смотр. </span><a class="rvts15" href="Constantsandvariables.html">Константы и переменные</a><span class="rvts6"> - «Назначение переменной»).</span></p>
+<p class="rvps4"><span class="rvts11">Постоянные</span><span class="rvts6"> константы и переменные (изображение ниже - </span><span class="rvts11">б</span><span class="rvts6">) сохраняются и доступны через сессии, в отличие от </span><span class="rvts11">временных</span><span class="rvts6"> (неотмеченных), которые доступны лишь в рамках текущей сессии, и удаляются после выхода из программы. Таким образом, если вы имеете в Истории вычисление с временной переменной, и хотите использовать его, то данная переменная не будет доступна, и покажется сообщение об ошибке. Поэтому рекомендуется назначать временные переменные через </span><span class="rvts11">Поле Вычислений</span><span class="rvts6"> (смотр. </span><a class="rvts15" href="Constantsandvariables.html">Константы и переменные</a><span class="rvts6"> - «Назначение переменной»), имея таким образом шанс найти назначение недостающей переменной в Истории.</span></p>
+<p class="rvps4"><span class="rvts11">Временные</span><span class="rvts6"> переменные (изображении ниже - </span><span class="rvts11">в</span><span class="rvts6">) могут быть отмечены в любое время в рамках текущей сессии, перед выходом из программы, превращаясь таким образом в </span><span class="rvts11">постоянные</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6">Все записи в списке, кроме </span><span class="rvts11">встроенных</span><span class="rvts6"> констант (изображение ниже - </span><span class="rvts11">а</span><span class="rvts6">), могут быть удалены через контекстное меню или клавишей </span><span class="rvts11">Delete</span><span class="rvts6">.</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/constvars_ru.png"></p>
+<p class="rvps12"><span class="rvts16">Диалог </span><span class="rvts23">Константы и Переменные</span><span class="rvts16">.</span></p>
+<p class="rvps13"><span class="rvts25">1. Поле ввода</span><span class="rvts24"> - смотр. </span><span class="rvts32">Шаблон</span><span class="rvts24"> для добавления константы или переменной,&nbsp;</span><span class="rvts25"> 2. Список констант и переменных</span><span class="rvts24">,&nbsp;</span><span class="rvts25"> 3. Статус и Шаблон</span><span class="rvts24"> - показывает также ошибки, &nbsp;</span><span class="rvts25">4. Примечание</span><span class="rvts24">.</span></p>
+<p class="rvps18"><span class="rvts25">a) Встроенные константы</span><span class="rvts24"> - недоступны для редактирования, &nbsp;</span><span class="rvts25">b) Постоянные</span><span class="rvts24"> - отмеченные, &nbsp;</span><span class="rvts25">c) Временные</span><span class="rvts24"> - неотмеченные (будут удалены после выхода из программы).</span></p>
+<h5 class="rvps17"><span class="rvts0"><span class="rvts31">Шаблон</span></span></h5>
+<p class="rvps4"><span class="rvts6">Допустимые символы для ввода имени - буквы верхнего и нижнего регистра, символ нижнего подчеркивания «_», и, за исключением первого символа, цифры от 0 до 9 (максимальная длина в скобках).</span></p>
+<p class="rvps4"><span class="rvts6">Допустимые числа для ввода значения - целые, десятичные, двоичные, восьмеричные и шестнадцатеричные (максимальная длина в скобках).</span></p>
+<p class="rvps8"><span class="rvts12">Смотр. </span><a class="rvts33" href="Calculations.html">Вычисления</a><span class="rvts12"> - «Лексический анализ» для доп. информации.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

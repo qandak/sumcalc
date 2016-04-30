@@ -1,0 +1,339 @@
+﻿<html>
+	
+<head>
+	<title>Список функций</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", , , , , , Функции, Конвертация, Логарифмические, Специальные, Тригонометрические">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Functionslist");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Список функций</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Errors.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Shortcutkeys.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">Общие математические функции</span></span></h3>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">abs(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает абсолютную величину </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">amn(</span></span><span class="rvts0"><span class="rvts40"> x</span></span><span class="rvts0"><span class="rvts42">1</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">2</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">3</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, ...</span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">N</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает Арифметическое Среднее всех аргументов.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">bin(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает двоичное представление </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cbrt(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает кубический корень из </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ceil(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает ближайшее большее целое число от </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">dd(</span></span><span class="rvts0"><span class="rvts40"> degrees </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">переводит угол в десятичном представлении в Градусы(°), Минуты('), Секунды(") в виде функции </span><span class="rvts44">dms(</span><span class="rvts46">градусы, минуты, секунды</span><span class="rvts44">)</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">deg(</span></span><span class="rvts0"><span class="rvts40"> radians </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">переводит Радианы в Градусы.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">dms(</span></span><span class="rvts0"><span class="rvts40"> degrees </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">minutes </span></span><span class="rvts0"><span class="rvts39">,</span></span><span class="rvts0"><span class="rvts47"> </span></span><span class="rvts0"><span class="rvts45">seconds</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">переводит Градусы(°), Минуты(') и Секунды(") в десятичное представление.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">dperc(</span></span><span class="rvts0"><span class="rvts40"> old </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">new </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает разницу в процентном соотношении между числами [</span><span class="rvts11">old</span><span class="rvts6">] и [</span><span class="rvts11">new</span><span class="rvts6">].</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">exp(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает </span><span class="rvts11">e</span><span class="rvts6"> в степени </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">fact(</span></span><span class="rvts0"><span class="rvts40"> n </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает факториал числа </span><span class="rvts11">n</span><span class="rvts6">. Выдает ошибку если </span><span class="rvts11">n</span><span class="rvts6"> не целое или отрицательное. </span><span class="rvts11">n</span><span class="rvts6"> ограничен максимальным числом </span><span class="rvts11">64</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">floor(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает ближайшее меньшее целое число от </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">gcd(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">y </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает Наибольший Общий Делитель (НОД) чисел </span><span class="rvts11">x</span><span class="rvts6"> и </span><span class="rvts11">y</span><span class="rvts6">. Если </span><span class="rvts11">x</span><span class="rvts6"> и </span><span class="rvts11">y</span><span class="rvts6"> больше нуля, то значение </span><span class="rvts44">gcd( x , y )</span><span class="rvts43"> - наибольшее целое число, которое делит </span><span class="rvts11">x</span><span class="rvts6"> и </span><span class="rvts11">y</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">gmn(</span></span><span class="rvts0"><span class="rvts40"> x</span></span><span class="rvts0"><span class="rvts42">1</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">2</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">3</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, ...</span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">N</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает Геометрическое Среднее всех аргументов.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">hex(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает шестнадцатеричное представление </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">hmn(</span></span><span class="rvts0"><span class="rvts40"> x</span></span><span class="rvts0"><span class="rvts42">1</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">2</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">3</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, ...</span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">N</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает Гармоническое Среднее всех аргументов.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">hyp(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">y </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает Евклидову норму, длину вектора от начала координат до точки (</span><span class="rvts11">x</span><span class="rvts6">, </span><span class="rvts11">y</span><span class="rvts6">).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">max(</span></span><span class="rvts0"><span class="rvts40"> x</span></span><span class="rvts0"><span class="rvts42">1</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">2</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">3</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, ...</span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">N</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает наибольшее значение из всех аргументов.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">min(</span></span><span class="rvts0"><span class="rvts40"> x</span></span><span class="rvts0"><span class="rvts42">1</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">2</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">3</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, ...</span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">N</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает наименьшее значение из всех аргументов.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">mod(</span></span><span class="rvts0"><span class="rvts40"> dividend </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">divisor </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает остаток от деления ( dividend / divisor ).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">oct(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает восьмеричное представление </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">pc(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">percent </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает [</span><span class="rvts11">percent</span><span class="rvts6">] процентов </span><span class="rvts11">x</span><span class="rvts6"> (смотр. также функцию </span><span class="rvts11">perc</span><span class="rvts6">).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">perc(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">percent </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает </span><span class="rvts11">x</span><span class="rvts6"> увеличенный или (-) уменьшенный на [</span><span class="rvts11">percent</span><span class="rvts6">] процентов (смотр. также функцию </span><span class="rvts11">pc</span><span class="rvts6">).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">pow(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">y </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает </span><span class="rvts11">x</span><span class="rvts6"> в степени </span><span class="rvts11">y</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">rad(</span></span><span class="rvts0"><span class="rvts40"> degrees </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">переводит Градусы в Радианы.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">round(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">,</span></span><span class="rvts0"><span class="rvts47"> </span></span><span class="rvts0"><span class="rvts45">dig</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает ближайшее целое от </span><span class="rvts11">x</span><span class="rvts6">, если dig пропущен, иначе - округленное на [dig] символов после запятой.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">rt(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">N </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает корень из </span><span class="rvts11">x</span><span class="rvts6"> с основанием </span><span class="rvts11">N</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqrt(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает квадратный корень от </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sum(</span></span><span class="rvts0"><span class="rvts40"> x</span></span><span class="rvts0"><span class="rvts42">1</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">2</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">3</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">, ...</span></span><span class="rvts0"><span class="rvts40">x</span></span><span class="rvts0"><span class="rvts42">N</span></span><span class="rvts0"><span class="rvts40"> </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает сумму всех аргументов.</span></p>
+<h3 class="rvps30"><span class="rvts0"><span class="rvts20">Тригонометрические фенкции</span></span></h3>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">acosh(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает гиперболический арккосинус числа </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">asinh(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает гиперболический арксинус числа </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">atanh(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает гиперболический арктангенс числа </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cosh(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает гиперболический косинус числа </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sinh(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает гиперболический синус числа </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">tanh(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает гиперболический тангенс числа </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">acos(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает арккосинус числа </span><span class="rvts11">x</span><span class="rvts6"> в радианах или градусах.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">asin(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает арксинус числа </span><span class="rvts11">x</span><span class="rvts6"> в радианах или градусах.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">atan(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает арктангенс числа </span><span class="rvts11">x</span><span class="rvts6"> в радианах или градусах.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">atan2(</span></span><span class="rvts0"><span class="rvts40"> y </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает atan(</span><span class="rvts11">y</span><span class="rvts6"> / </span><span class="rvts11">x</span><span class="rvts6">) в радианах или градусах.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cos(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает косинус угла </span><span class="rvts11">x</span><span class="rvts6"> (радианы или градусы).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sin(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает синус угла </span><span class="rvts11">x</span><span class="rvts6"> (радианы или градусы).</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">tan(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает тангенс угла </span><span class="rvts11">x</span><span class="rvts6"> (радианы или градусы).</span></p>
+<h3 class="rvps30"><span class="rvts0"><span class="rvts20">Логарифмические функции</span></span></h3>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">log10(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает логарифм числа </span><span class="rvts11">x</span><span class="rvts6"> по основанию 10.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">log2(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает логарифм числа </span><span class="rvts11">x</span><span class="rvts6"> по основанию 2.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">log(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">y </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает логарифм числа </span><span class="rvts11">x</span><span class="rvts6"> по основанию </span><span class="rvts11">y</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">lg(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает логарифм числа </span><span class="rvts11">x</span><span class="rvts6"> по основанию 10.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ln(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает натуральный логарифм числа </span><span class="rvts11">x</span><span class="rvts6"> (по основанию </span><span class="rvts11">e</span><span class="rvts6">).</span></p>
+<h3 class="rvps30"><span class="rvts0"><span class="rvts20">Специальные функции</span></span></h3>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cdf(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает Функцию распределения (CDF) стандартного нормального распределения.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">erf(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает функцию ошибки от значения </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">erfc(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает дополнительную функцию ошибки от значения </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">gamma(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает гамма-функцию значения </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">lgamma(</span></span><span class="rvts0"><span class="rvts40"> x </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">возвращает натуральный логарифм абсолютного значения гамма-функции при </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h3 class="rvps30"><span class="rvts0"><span class="rvts20">Функции конвертации</span></span></h3>
+<p class="rvps31"><span class="rvts41">Длина</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">in_mm(</span></span><span class="rvts0"><span class="rvts40"> inch </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Дюйм в Миллиметр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">in_cm(</span></span><span class="rvts0"><span class="rvts40"> inch </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Дюйм в Сантиметр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">in_m(</span></span><span class="rvts0"><span class="rvts40"> inch </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Дюйм в Метр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ft_in(</span></span><span class="rvts0"><span class="rvts40"> foot </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фут в Дюйм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ft_mm(</span></span><span class="rvts0"><span class="rvts40"> foot </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фут в Миллиметр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ft_cm(</span></span><span class="rvts0"><span class="rvts40"> foot </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фут в Сантиметр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ft_m(</span></span><span class="rvts0"><span class="rvts40"> foot </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фут в Метр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ftin_cm(</span></span><span class="rvts0"><span class="rvts40"> foot </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">inch </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фут и Дюймы в Сантиметр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ftin_m(</span></span><span class="rvts0"><span class="rvts40"> foot </span></span><span class="rvts0"><span class="rvts39">, </span></span><span class="rvts0"><span class="rvts40">inch </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фут и Дюймы в Метр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">yd_in(</span></span><span class="rvts0"><span class="rvts40"> yard </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Ярд в Дюйм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">yd_ft(</span></span><span class="rvts0"><span class="rvts40"> yard </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Ярд в Фут.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">yd_mm(</span></span><span class="rvts0"><span class="rvts40"> yard </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Ярд в Миллиметр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">yd_cm(</span></span><span class="rvts0"><span class="rvts40"> yard </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Ярд в Сантиметр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">yd_m(</span></span><span class="rvts0"><span class="rvts40"> yard </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Ярд в Метр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">yd_km(</span></span><span class="rvts0"><span class="rvts40"> yard </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Ярд в Километр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">mi_yd(</span></span><span class="rvts0"><span class="rvts40"> mile </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Миль в Ярд.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">mi_m(</span></span><span class="rvts0"><span class="rvts40"> mile </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Миль в Метр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">mi_km(</span></span><span class="rvts0"><span class="rvts40"> mile </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Миль в Километр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">mm_in(</span></span><span class="rvts0"><span class="rvts40"> mm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Миллиметр в Дюйм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cm_in(</span></span><span class="rvts0"><span class="rvts40"> cm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Сантиметр в Дюйм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cm_ft(</span></span><span class="rvts0"><span class="rvts40"> cm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Сантиметр в Фут.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cm_ftin(</span></span><span class="rvts0"><span class="rvts40"> cm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Сантиметр в Фут и Дюймы в виде функции </span><span class="rvts44">ftin_cm(</span><span class="rvts46">фут, дюймы</span><span class="rvts44">)</span><span class="rvts6">.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">m_ftin(</span></span><span class="rvts0"><span class="rvts40"> m </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Метр в Фут и Дюймы в виде функции </span><span class="rvts44">ftin_m(</span><span class="rvts46">фут, дюймы</span><span class="rvts44">)</span><span class="rvts6">..</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">m_in(</span></span><span class="rvts0"><span class="rvts40"> m </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Метр в Дюйм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">m_ft(</span></span><span class="rvts0"><span class="rvts40"> m </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Метр в Фут.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">m_yd(</span></span><span class="rvts0"><span class="rvts40"> m </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Метр в Ярд.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">m_mi(</span></span><span class="rvts0"><span class="rvts40"> m </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Метр в Миль.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">km_mi(</span></span><span class="rvts0"><span class="rvts40"> km </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Километр в Миль.</span></p>
+<p class="rvps31"><span class="rvts41">Площадь</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqcm_sqin(</span></span><span class="rvts0"><span class="rvts40"> sqcm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Сантиметр в Кв.Дюйм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqm_sqft(</span></span><span class="rvts0"><span class="rvts40"> sqm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Метр в Кв.Фут.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqm_sqyd(</span></span><span class="rvts0"><span class="rvts40"> sqm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Метр в Кв.Ярд.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqm_ac(</span></span><span class="rvts0"><span class="rvts40"> sqm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Метр в Акр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqm_ha(</span></span><span class="rvts0"><span class="rvts40"> sqm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Метр в Гектар.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqkm_sqmi(</span></span><span class="rvts0"><span class="rvts40"> sqkm </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Километр в Кв.Миль.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqin_sqcm(</span></span><span class="rvts0"><span class="rvts40"> sqin </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Дюйм в Кв.Сантиметр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqft_sqm(</span></span><span class="rvts0"><span class="rvts40"> sqft </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Фут в Кв.Метр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqyd_sqm(</span></span><span class="rvts0"><span class="rvts40"> sqyd </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Ярд в Кв.Метр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqmi_sqkm(</span></span><span class="rvts0"><span class="rvts40"> sqmi </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Миль в Кв.Километр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqmi_ac(</span></span><span class="rvts0"><span class="rvts40"> sqmi </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Миль в Акр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">sqmi_ha(</span></span><span class="rvts0"><span class="rvts40"> sqmi </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кв.Миль в Гектар.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ac_ha(</span></span><span class="rvts0"><span class="rvts40"> ac </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Акр в Гектар.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ha_ac(</span></span><span class="rvts0"><span class="rvts40"> ha </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Гектар в Акр.</span></p>
+<p class="rvps31"><span class="rvts41">Объем</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">l_usgal(</span></span><span class="rvts0"><span class="rvts40"> l </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Литр в Амер.Галлон.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">l_ukgal(</span></span><span class="rvts0"><span class="rvts40"> l </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Литр в Брит.Галлон.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">gal_pt(</span></span><span class="rvts0"><span class="rvts40"> gal </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Галлон (Амер. или Брит.) в Пинту.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ukgal_l(</span></span><span class="rvts0"><span class="rvts40"> ukgal </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Брит.Галлон в Литр.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">usgal_l(</span></span><span class="rvts0"><span class="rvts40"> usgal </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Амер.Галлон в Литр.</span></p>
+<p class="rvps31"><span class="rvts41">Масса</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">oz_g(</span></span><span class="rvts0"><span class="rvts40"> ounce </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Унцию в Грамм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">lb_oz(</span></span><span class="rvts0"><span class="rvts40"> pound </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фунт в Унцию.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">lb_g(</span></span><span class="rvts0"><span class="rvts40"> pound </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фунт в Грамм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">lb_kg(</span></span><span class="rvts0"><span class="rvts40"> pound </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фунт в Килограмм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">g_oz(</span></span><span class="rvts0"><span class="rvts40"> gram </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Грамм в Унцию.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">g_lb(</span></span><span class="rvts0"><span class="rvts40"> gram </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Грамм в Фунт.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">kg_oz(</span></span><span class="rvts0"><span class="rvts40"> kg </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Килограмм в Унцию.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">kg_lb(</span></span><span class="rvts0"><span class="rvts40"> kg </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Килограмм в Фунт.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ct_g(</span></span><span class="rvts0"><span class="rvts40"> ct </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Карат в Грамм.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">ct_oz(</span></span><span class="rvts0"><span class="rvts40"> ct </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Карат в Унцию.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">g_ct(</span></span><span class="rvts0"><span class="rvts40"> g </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Грамм в Карат.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">oz_ct(</span></span><span class="rvts0"><span class="rvts40"> oz </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Унцию в Карат.</span></p>
+<p class="rvps31"><span class="rvts41">Энергия</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">wh_cl(</span></span><span class="rvts0"><span class="rvts40"> watt </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Ватт/час в Калорию.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">wh_j(</span></span><span class="rvts0"><span class="rvts40"> watt_h </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Ватт/час в Джоуль.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cl_j(</span></span><span class="rvts0"><span class="rvts40"> calorie </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Калорию в Джоуль.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">cl_wh(</span></span><span class="rvts0"><span class="rvts40"> calorie </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Калорию в Ватт/час.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">j_cl(</span></span><span class="rvts0"><span class="rvts40"> joule </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Джоуль в Калорию.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">j_wh(</span></span><span class="rvts0"><span class="rvts40"> joule </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Джоуль в Ватт/час.</span></p>
+<p class="rvps31"><span class="rvts41">Мощность</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">kw_hp(</span></span><span class="rvts0"><span class="rvts40"> kw </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Киловатт в Лошадиную Силу.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">hp_kw(</span></span><span class="rvts0"><span class="rvts40"> hp </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Лошадиную Силу в Киловатт.</span></p>
+<p class="rvps31"><span class="rvts41">Температура</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">c_f(</span></span><span class="rvts0"><span class="rvts40"> c </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Цельсий в Фаренгейт.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">c_k(</span></span><span class="rvts0"><span class="rvts40"> c </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Цельсий в Кельвин.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">f_c(</span></span><span class="rvts0"><span class="rvts40"> f </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Фаренгейт в Цельсий.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">f_k(</span></span><span class="rvts0"><span class="rvts40"> f </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фаренгейт в Кельвин.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">k_c(</span></span><span class="rvts0"><span class="rvts40"> k </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps28"><span class="rvts6">конвертирует Кельвин в Цельсий.</span></p>
+<h5 class="rvps27"><span class="rvts0"><span class="rvts39">k_f(</span></span><span class="rvts0"><span class="rvts40"> k </span></span><span class="rvts0"><span class="rvts39">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кельвин в Фаренгейт.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

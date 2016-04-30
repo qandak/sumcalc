@@ -1,0 +1,248 @@
+﻿<html>
+	
+<head>
+	<title>Shortcut keys</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Shortcut keys">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Shortcutkeys");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Shortcut keys</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Functionslist.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="AboutSUM.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps33"><span class="rvts0"><span class="rvts20">Shortcut keys</span></span></h3>
+<div class="rvps2"><table width="100%" border="1" cellpadding="5" cellspacing="-2" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px; background-color: #80afea;"><p class="rvps2"><span class="rvts50">Keyboard Shortcut</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px; background-color: #80afea;"><p class="rvps2"><span class="rvts50">Action</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px; background-color: #80afea;"><p class="rvps2"><span class="rvts50">Notes</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">F1</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Open the program help</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Enter / Return</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Validate an input</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Do nothing, if the input field is empty or a calculation is done</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Esc</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Clear Calculation Field</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">If there is a text selection - cancel selection</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Up</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps4"><span class="rvts6">Move to History in </span><span class="rvts11">Free</span><span class="rvts6"> state*;</span></p>
+<p class="rvps2"><span class="rvts6">Up in history list in </span><span class="rvts11">Free</span><span class="rvts6"> state*</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Down</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Down in history list in </span><span class="rvts11">Free</span><span class="rvts6"> state*</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Del / Delete</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps4"><span class="rvts6">Delete (in usual way) text to the right or selected text in </span><span class="rvts11">Edit</span><span class="rvts6"> state*;</span></p>
+<p class="rvps4"><span class="rvts6">Delete current item in list (i.e History) in </span><span class="rvts11">Free</span><span class="rvts6"> state*;</span></p>
+<p class="rvps2"><span class="rvts6">Clear Calculation Field after calculation is done</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + Shift + C</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Change "Autocopy result" mode</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + E</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Exit</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Close button minimize program to system Tray</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + P</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Open Preferences window</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + H</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Open and close History (switch between Simple and History modes)</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + Up</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Open History (switch to History mode), if closed.</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + Down</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Close History (switch to Simple mode), if open.</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + X</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Cut selected text</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + C</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps4"><span class="rvts6">Copy (in usual way) selected text;</span></p>
+<p class="rvps2"><span class="rvts6">Copy expression of current item in History in </span><span class="rvts11">Free</span><span class="rvts6"> state*, if there is no text selection</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + R</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Copy result of current item in History in </span><span class="rvts11">Free</span><span class="rvts6"> state*, if the item is an expression or an assignment</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + V</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Paste from clipboard</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + S</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Save History</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">It is always automatically saving on Exit</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + Backspace</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps4"><span class="rvts6">Delete all to the left of the cursor in </span><span class="rvts11">Edit</span><span class="rvts6"> state*;</span></p>
+<p class="rvps2"><span class="rvts6">Clear Calculation Field after calculation is done</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="254" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Ctrl + Delete</span></p>
+</td>
+<td width="639" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6">Delete all to the right of the cursor in </span><span class="rvts11">Edit</span><span class="rvts6"> state*</span></p>
+</td>
+<td width="666" height="18" valign="middle" style="border-width : 2px; border-color: #808080; border-style: solid; padding: 6px 4px;"><p class="rvps2"><span class="rvts6"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts12"><br/></span></p>
+<p class="rvps8"><span class="rvts12">* See </span><a class="rvts34" href="UserInterface.html">User Interface</a><span class="rvts12"> - "Calculation Field and History", for states.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

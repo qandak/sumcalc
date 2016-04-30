@@ -1,0 +1,95 @@
+﻿<html>
+	
+<head>
+	<title>Краткое Руководство</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content=", , , , , , , , , , , , , Автокопирование, Автозапуск, Python, Быстрая клавиша вызова, Интерфейс, История, Вид, Поле Вычислений">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("QuickGuide");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Краткое Руководство</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Interface.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Введение</span></span></h3>
+<p class="rvps4"><span class="rvts6">Название </span><span class="rvts11">SUM</span><span class="rvts6"> не указывает на известную математическую функцию суммирования, а является лишь настоятельной просьбой - </span><span class="rvts11">Stop Using Mouse! -</span><span class="rvts6"> в виде аббревиатуры (пер. </span><span class="rvts12">«Перестаньте Пользоваться Мышью»</span><span class="rvts6">).</span></p>
+<p class="rvps4"><span class="rvts11">SUM</span><span class="rvts6"> является достаточно простым, но в то же время интуитивным и довольно мощным </span><span class="rvts11">«однострочным»</span><span class="rvts6"> кросс-платформенным калькулятором с Историей. </span><span class="rvts11">SUM</span><span class="rvts6"> предоставляет простой и минималистичный </span><a class="rvts15" href="Interface.html">Интерфейс</a><span class="rvts6"> для быстрого составления вычислительных выражений произвольной длины и сложности.</span></p>
+<p class="rvps4"><span class="rvts6">Средства вычисления основаны на интерпретаторе </span><a class="rvts13" href="http://www.python.org/" target="_blank">Python</a><span class="rvts6"> (для версии Python смотр. </span><span class="rvts12">О программе</span><span class="rvts6"> в главном Меню).</span></p>
+<p class="rvps4"><span class="rvts6">Одно из ключевых свойств </span><span class="rvts11">SUM</span><span class="rvts6"> &nbsp;- </span><span class="rvts14">Быстрая клавиша вызова</span><span class="rvts6">, активирующая (или переводящая на передний план) и закрывающая программу с помощью клавиатуры. Преимущества </span><span class="rvts12">Быстрой клавиши вызова</span><span class="rvts6"> становятся более существенными, если на клавиатуре есть Цифровой блок. Для настройки </span><span class="rvts12">Быстрой клавиши доступа</span><span class="rvts6"> смотр. </span><a class="rvts15" href="Preferences.html">Настройки</a><span class="rvts6">.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">Вычисления</span></span></h3>
+<p class="rvps4"><span class="rvts6">Так как </span><span class="rvts11">SUM</span><span class="rvts6"> использует однострочный синтаксис для вычислительных выражений - вложенность любых элементов, подвыражений и небуквенных математических символов, должна быть составлена с помощью скобок.</span></p>
+<p class="rvps4"><span class="rvts6">В примере ниже, символ </span><span class="rvts11">«квадратного корня»</span><span class="rvts6"> переведен в функцию </span><span class="rvts11">sqrt( )</span><span class="rvts6"> (смотр. </span><a class="rvts15" href="Functionslist.html">Список функций</a><span class="rvts6"> для всех функций), который получает вложенное выражение как аргумент. Переменная </span><span class="rvts11">x</span><span class="rvts6"> в примере должна быть заранее назначена пользователем, в отличие от </span><span class="rvts11">pi</span><span class="rvts6"> (</span><span class="rvts17">π</span><span class="rvts6">), которая является встроенной программной константой (смотр. </span><a class="rvts15" href="Constantsandvariables.html">Константы и переменные</a><span class="rvts6">).</span></p>
+<p class="rvps4"><span class="rvts6">Сразу после завершения вычисления, оно автоматически добавляется в Историю (если не снимать отметку </span><span class="rvts11">Добавить в Историю</span><span class="rvts6"> в </span><a class="rvts15" href="Preferences.html">Настройках</a><span class="rvts6">), а результат, в свою очередь, копируется в буфер обмена (если не отключена опция </span><span class="rvts11">Автокопирование результата</span><span class="rvts6">).</span></p>
+<p class="rvps4"><span class="rvts6">Смотр. раздел </span><a class="rvts15" href="Calculations.html">Вычисления</a><span class="rvts6">.</span></p>
+<p class="rvps6"><img alt="" style="padding : 1px;" src="lib/comp_ru_bw.png" onmouseover="this.src='lib/comp_ru_cl.png';" onmouseout="this.src='lib/comp_ru_bw.png';"></p>
+<p class="rvps7"><span class="rvts16">Перевод математического выражения в однострочный.</span></p>
+<p class="rvps5"><span class="rvts19">Наведите курсор для визуального подчеркивания перевода.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">Интерфейс</span></span></h3>
+<p class="rvps4"><span class="rvts6">История по умолчанию закрыта, но может быть открыта с соответствующей кнопкой или клавишной комбинацией </span><span class="rvts11">Ctrl-H</span><span class="rvts6">. Смотр. </span><a class="rvts15" href="Interface.html">Интерфейс</a><span class="rvts6"> для </span><span class="rvts11">вида с Историей</span><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6">Клавиши (стрелки на клавиатуре) </span><span class="rvts11">Вверх</span><span class="rvts6"> и </span><span class="rvts11">Вниз</span><span class="rvts6"> перемещают по Истории назад и вперед, соответственно. Перемещение по Истории не доступно в режиме </span><span class="rvts11">Редактирования </span><span class="rvts6">(смотр. </span><a class="rvts15" href="Interface.html">Интерфейс</a><span class="rvts6"> - «Поле Вычислений и История»), для предотвращения потери уже составленного выражения от случайного нажатия клавиши </span><span class="rvts11">Вверх</span><span class="rvts6">. История может быть удалены, как выборочно, так и очищена полностью с помощью соответствующей опции в </span><a class="rvts15" href="Preferences.html">Настройках</a><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6">Чтоб скопировать результат выражения, которое уже в Истории, не нужно делать новых вычислений. После остановки на нужном элементе, нажмите </span><span class="rvts11">Ctrl-C</span><span class="rvts6"> для копирования выражения (если в Поле Вычисления есть выделение - будет скопирован выделенный фрагмент), и </span><span class="rvts11">Ctrl-R</span><span class="rvts6"> для копирования результата. Смотр. все </span><a class="rvts15" href="Shortcutkeys.html">Клавишные комбинации</a><span class="rvts6">.</span></p>
+<p class="rvps4"><span class="rvts6">Индикатор в квадратных скобках, после заголовка главного окна, показывает текущую единицу углов для тригонометрических функций. Возможны два варианта - </span><span class="rvts11">градусы</span><span class="rvts6"> (по умолчанию) и </span><span class="rvts11">радианы</span><span class="rvts6">.</span></p>
+<h3 class="rvps10"><span class="rvts0"><span class="rvts20">Более детальная справка</span></span></h3>
+<p class="rvps8"><span class="rvts18">Для дополнительной информации выберите интересующий раздел из меню слева.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+
