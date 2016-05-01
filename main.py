@@ -51,7 +51,7 @@ translate = QtWidgets.QApplication.translate
 QT_TRANSLATE_NOOP = QtCore.QT_TRANSLATE_NOOP
 
 appname = 'SUM'
-version = '0.1b'
+version = '0.2b'
 
 firstStartMsg_NL = QT_TRANSLATE_NOOP('FirstStart', '''
 <font size=4><b>First Start</b></font>
