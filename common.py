@@ -2,6 +2,7 @@ _eq_done = False
 _use_radians = False
 _listing_on = True
 _expr_tryassign = False
+_virt_numlock_pressed = False
 
 _reformat_on = True
 _scientific_on = True

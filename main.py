@@ -38,8 +38,6 @@ if platform == 'win':
     from ctypes import WinDLL, windll
     from winglobalkey import GlobalHotKeys
 
-    _virt_numlock_pressed = False
-
 
 ###################
 #  -  GLOBALS  -  #
