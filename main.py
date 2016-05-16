@@ -51,7 +51,7 @@ translate = QtWidgets.QApplication.translate
 QT_TRANSLATE_NOOP = QtCore.QT_TRANSLATE_NOOP
 
 appname = 'SUM'
-version = '0.2b'
+version = '0.3b'
 
 firstStartMsg_NL = QT_TRANSLATE_NOOP('FirstStart', '''
 <font size=4><b>First Start</b></font>
@@ -705,6 +705,7 @@ class MainWindow(QtWidgets.QWidget):
         self.menuAbt.setText(translate('Menu', 'About'))
         self.menuHlp.setText(translate('Menu', 'Help'))
         self.menuExt.setText(translate('Menu', 'Exit'))
+        self.tray.exitBtn.setText(translate('Tray', 'Exit'))
         self.menuAutocopy.setText(translate('Menu', 'Autocopy result'))
         self.constDialog.setWindowTitle(translate('ConstVarDialog', 'Constants and Variables'))
         self.constDialog.statBar.setText(translate('ConstVarDialog',
@@ -1639,9 +1640,9 @@ class SystemTrayIcon(QtWidgets.QSystemTrayIcon):
 
     def __init__(self, icon, parent):
         QtWidgets.QSystemTrayIcon.__init__(self, icon, parent)
-        trayMenu = QtWidgets.QMenu()
-        trayMenu.addAction(translate('Tray', 'Exit'), parent.exitApp)
-        self.setContextMenu(trayMenu)
+        self.trayMenu = QtWidgets.QMenu()
+        self.exitBtn = self.trayMenu.addAction(translate('Tray', 'Exit'), parent.exitApp)
+        self.setContextMenu(self.trayMenu)
         self.activated.connect(parent.tray_activated)
 
 
