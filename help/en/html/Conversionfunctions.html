@@ -1,0 +1,235 @@
+﻿<html>
+	
+<head>
+	<title>Conversion functions</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Conversion">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Conversionfunctions");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Conversion functions</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Functionslist.html">Functions list</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Functionslist.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Specialfunctions.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Shortcutkeys.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Conversion functions</span></span></h3>
+<p class="rvps32"><span class="rvts51">Length</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">in_mm(</span></span><span class="rvts0"><span class="rvts44"> inch </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Inch to Millimeter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">in_cm(</span></span><span class="rvts0"><span class="rvts44"> inch </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Inch to Centimeter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">in_m(</span></span><span class="rvts0"><span class="rvts44"> inch </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Inch to Meter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ft_in(</span></span><span class="rvts0"><span class="rvts44"> foot </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Foot to Inch.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ft_mm(</span></span><span class="rvts0"><span class="rvts44"> foot </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Foot to Millimeter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ft_cm(</span></span><span class="rvts0"><span class="rvts44"> foot </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Foot to Centimeter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ft_m(</span></span><span class="rvts0"><span class="rvts44"> foot </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Foot to Meter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ftin_cm(</span></span><span class="rvts0"><span class="rvts44"> foot </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">inch </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Foot and Inches to Centimeter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ftin_m(</span></span><span class="rvts0"><span class="rvts44"> foot </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">inch </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Foot and Inches to Meter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">yd_in(</span></span><span class="rvts0"><span class="rvts44"> yard </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Yard to Inch.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">yd_ft(</span></span><span class="rvts0"><span class="rvts44"> yard </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Yard to Foot.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">yd_mm(</span></span><span class="rvts0"><span class="rvts44"> yard </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Yard to Millimeter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">yd_cm(</span></span><span class="rvts0"><span class="rvts44"> yard </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Yard to Centimeter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">yd_m(</span></span><span class="rvts0"><span class="rvts44"> yard </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Yard to Meter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">yd_km(</span></span><span class="rvts0"><span class="rvts44"> yard </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Yard to Kilometer.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">mi_yd(</span></span><span class="rvts0"><span class="rvts44"> mile </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Mile to Yard.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">mi_m(</span></span><span class="rvts0"><span class="rvts44"> mile </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Mile to Meter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">mi_km(</span></span><span class="rvts0"><span class="rvts44"> mile </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Mile to Kilometer.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">mm_in(</span></span><span class="rvts0"><span class="rvts44"> mm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Millimeter to Inch.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">cm_in(</span></span><span class="rvts0"><span class="rvts44"> cm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Centimeter to Inch.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">cm_ft(</span></span><span class="rvts0"><span class="rvts44"> cm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Centimeter to Foot.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">cm_ftin(</span></span><span class="rvts0"><span class="rvts44"> cm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Centimeter to Foot and Inches in the form of </span><span class="rvts42">ftin_cm(</span><span class="rvts50">foot, inch</span><span class="rvts42">)</span><span class="rvts41"> function.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">m_ftin(</span></span><span class="rvts0"><span class="rvts44"> m </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Meter to Foot and Inches in the form of </span><span class="rvts42">ftin_m(</span><span class="rvts50">foot, inch</span><span class="rvts42">)</span><span class="rvts41"> function.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">m_in(</span></span><span class="rvts0"><span class="rvts44"> m </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Meter to Inch.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">m_ft(</span></span><span class="rvts0"><span class="rvts44"> m </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Meter to Foot.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">m_yd(</span></span><span class="rvts0"><span class="rvts44"> m </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Meter to Yard.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">m_mi(</span></span><span class="rvts0"><span class="rvts44"> m </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Meter to Mile.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">km_mi(</span></span><span class="rvts0"><span class="rvts44"> km </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Kilometer to Mile.</span></p>
+<p class="rvps31"><span class="rvts51">Area</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqcm_sqin(</span></span><span class="rvts0"><span class="rvts44"> sqcm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Centimeter to Square Inch.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqm_sqft(</span></span><span class="rvts0"><span class="rvts44"> sqm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Meter to Square Foot.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqm_sqyd(</span></span><span class="rvts0"><span class="rvts44"> sqm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Meter to Square Yard.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqm_ac(</span></span><span class="rvts0"><span class="rvts44"> sqm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Meter to Acre.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqm_ha(</span></span><span class="rvts0"><span class="rvts44"> sqm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Meter to Hectare.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqkm_sqmi(</span></span><span class="rvts0"><span class="rvts44"> sqkm </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Kilometer to Square Mile.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqin_sqcm(</span></span><span class="rvts0"><span class="rvts44"> sqin </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Inch to Square Centimeter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqft_sqm(</span></span><span class="rvts0"><span class="rvts44"> sqft </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Foot to Square Meter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqyd_sqm(</span></span><span class="rvts0"><span class="rvts44"> sqyd </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Yard to Square Meter.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqmi_sqkm(</span></span><span class="rvts0"><span class="rvts44"> sqmi </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Mile to Square Kilometer.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqmi_ac(</span></span><span class="rvts0"><span class="rvts44"> sqmi </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Mile to Acre.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqmi_ha(</span></span><span class="rvts0"><span class="rvts44"> sqmi </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Square Mile to Hectare.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ac_ha(</span></span><span class="rvts0"><span class="rvts44"> ac </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Acre to Hectare.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ha_ac(</span></span><span class="rvts0"><span class="rvts44"> ha </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Hectare to Acre.</span></p>
+<p class="rvps31"><span class="rvts51">Volume</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">l_usgal(</span></span><span class="rvts0"><span class="rvts44"> l </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Litre to US Gallon.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">l_ukgal(</span></span><span class="rvts0"><span class="rvts44"> l </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Litre to UK Gallon.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">gal_pt(</span></span><span class="rvts0"><span class="rvts44"> gal </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Gallon (either US or UK) to Pint.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ukgal_l(</span></span><span class="rvts0"><span class="rvts44"> ukgal </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts UK Gallon to Litre.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">usgal_l(</span></span><span class="rvts0"><span class="rvts44"> usgal </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts US Gallon to Litre.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">oz_g(</span></span><span class="rvts0"><span class="rvts44"> ounce </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Ounce to Gram.</span></p>
+<p class="rvps31"><span class="rvts51">Weight</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">lb_oz(</span></span><span class="rvts0"><span class="rvts44"> pound </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Pound to Ounce.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">lb_g(</span></span><span class="rvts0"><span class="rvts44"> pound </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Pound to Gram.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">lb_kg(</span></span><span class="rvts0"><span class="rvts44"> pound </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Pound to Kilogram.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">g_oz(</span></span><span class="rvts0"><span class="rvts44"> gram </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Gram to Ounce.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">g_lb(</span></span><span class="rvts0"><span class="rvts44"> gram </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Gram to Pound.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">kg_oz(</span></span><span class="rvts0"><span class="rvts44"> kg </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Kilogram to Ounce.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">kg_lb(</span></span><span class="rvts0"><span class="rvts44"> kg </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Kilogram to Pound.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ct_g(</span></span><span class="rvts0"><span class="rvts44"> ct </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Carat to Gram.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ct_oz(</span></span><span class="rvts0"><span class="rvts44"> ct </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Carat to Ounce.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">g_ct(</span></span><span class="rvts0"><span class="rvts44"> g </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Gram to Carat.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">oz_ct(</span></span><span class="rvts0"><span class="rvts44"> oz </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Ounce to Carat.</span></p>
+<p class="rvps31"><span class="rvts51">Energy</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">wh_cl(</span></span><span class="rvts0"><span class="rvts44"> watt </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Watt-hour to Calorie.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">wh_j(</span></span><span class="rvts0"><span class="rvts44"> watt_h </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Watt-hour to Joule.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">cl_j(</span></span><span class="rvts0"><span class="rvts44"> calorie </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Calorie to Joule.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">cl_wh(</span></span><span class="rvts0"><span class="rvts44"> calorie </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Calorie to Watt-hour.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">j_cl(</span></span><span class="rvts0"><span class="rvts44"> joule </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Joule to Calorie.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">j_wh(</span></span><span class="rvts0"><span class="rvts44"> joule </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Joule to Watt-hour.</span></p>
+<p class="rvps31"><span class="rvts51">Power</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">kw_hp(</span></span><span class="rvts0"><span class="rvts44"> kw </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts KiloWatt to Horsepower.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">hp_kw(</span></span><span class="rvts0"><span class="rvts44"> hp </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Horsepower to KiloWatt.</span></p>
+<p class="rvps31"><span class="rvts51">Temperature</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">c_f(</span></span><span class="rvts0"><span class="rvts44"> c </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Celsius to Fahrenheit.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">c_k(</span></span><span class="rvts0"><span class="rvts44"> c </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Celsius to Kelvin.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">f_c(</span></span><span class="rvts0"><span class="rvts44"> f </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Fahrenheit to Celsius.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">f_k(</span></span><span class="rvts0"><span class="rvts44"> f </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Fahrenheit to Kelvin.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">k_c(</span></span><span class="rvts0"><span class="rvts44"> k </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Kelvin to Celsius.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">k_f(</span></span><span class="rvts0"><span class="rvts44"> k </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps30"><span class="rvts41">converts Kelvin to Fahrenheit.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

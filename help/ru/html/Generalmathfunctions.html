@@ -1,0 +1,140 @@
+﻿<html>
+	
+<head>
+	<title>Общие математические функции</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Функции">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Generalmathfunctions");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Общие математические функции</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Functionslist.html">Список функций</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Functionslist.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Functionslist.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Trigonometricfunctions.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Общие математические функции</span></span></h3>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">abs(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает абсолютную величину </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">amn(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает Арифметическое Среднее всех аргументов.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">bin(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает двоичное представление </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">cbrt(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает кубический корень из </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ceil(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает ближайшее большее целое число от </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">dd(</span></span><span class="rvts0"><span class="rvts42"> degrees </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">переводит угол в десятичном представлении в Градусы(°), Минуты('), Секунды(") в виде функции </span><span class="rvts45">dms(</span><span class="rvts47">градусы, минуты, секунды</span><span class="rvts45">)</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">deg(</span></span><span class="rvts0"><span class="rvts42"> radians </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">переводит Радианы в Градусы.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">dms(</span></span><span class="rvts0"><span class="rvts42"> degrees </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">minutes </span></span><span class="rvts0"><span class="rvts41">,</span></span><span class="rvts0"><span class="rvts48"> </span></span><span class="rvts0"><span class="rvts46">seconds</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">переводит Градусы(°), Минуты(') и Секунды(") в десятичное представление.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">dperc(</span></span><span class="rvts0"><span class="rvts42"> old </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">new </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает разницу в процентном соотношении между числами [</span><span class="rvts11">old</span><span class="rvts6">] и [</span><span class="rvts11">new</span><span class="rvts6">].</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">exp(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает </span><span class="rvts11">e</span><span class="rvts6"> в степени </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">fact(</span></span><span class="rvts0"><span class="rvts42"> n </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает факториал числа </span><span class="rvts11">n</span><span class="rvts6">. Выдает ошибку если </span><span class="rvts11">n</span><span class="rvts6"> не целое или отрицательное. </span><span class="rvts11">n</span><span class="rvts6"> ограничен максимальным числом </span><span class="rvts11">64</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">floor(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает ближайшее меньшее целое число от </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">gcd(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">y </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает Наибольший Общий Делитель (НОД) чисел </span><span class="rvts11">x</span><span class="rvts6"> и </span><span class="rvts11">y</span><span class="rvts6">. Если </span><span class="rvts11">x</span><span class="rvts6"> и </span><span class="rvts11">y</span><span class="rvts6"> больше нуля, то значение </span><span class="rvts45">gcd( x , y )</span><span class="rvts44"> - наибольшее целое число, которое делит </span><span class="rvts11">x</span><span class="rvts6"> и </span><span class="rvts11">y</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">gmn(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает Геометрическое Среднее всех аргументов.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">hex(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает шестнадцатеричное представление </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">hmn(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает Гармоническое Среднее всех аргументов.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">hyp(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">y </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает Евклидову норму, длину вектора от начала координат до точки (</span><span class="rvts11">x</span><span class="rvts6">, </span><span class="rvts11">y</span><span class="rvts6">).</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">max(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает наибольшее значение из всех аргументов.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">min(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает наименьшее значение из всех аргументов.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">mod(</span></span><span class="rvts0"><span class="rvts42"> dividend </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">divisor </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает остаток от деления ( dividend / divisor ).</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">oct(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает восьмеричное представление </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">pc(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">percent </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает [</span><span class="rvts11">percent</span><span class="rvts6">] процентов </span><span class="rvts11">x</span><span class="rvts6"> (смотр. также функцию </span><span class="rvts11">perc</span><span class="rvts6">).</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">perc(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">percent </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает </span><span class="rvts11">x</span><span class="rvts6"> увеличенный или (-) уменьшенный на [</span><span class="rvts11">percent</span><span class="rvts6">] процентов (смотр. также функцию </span><span class="rvts11">pc</span><span class="rvts6">).</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">pow(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">y </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает </span><span class="rvts11">x</span><span class="rvts6"> в степени </span><span class="rvts11">y</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">rad(</span></span><span class="rvts0"><span class="rvts42"> degrees </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">переводит Градусы в Радианы.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">round(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">,</span></span><span class="rvts0"><span class="rvts48"> </span></span><span class="rvts0"><span class="rvts46">dig</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает ближайшее целое от </span><span class="rvts11">x</span><span class="rvts6">, если dig пропущен, иначе - округленное на [dig] символов после запятой.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">rt(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">N </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает корень из </span><span class="rvts11">x</span><span class="rvts6"> с основанием </span><span class="rvts11">N</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqrt(</span></span><span class="rvts0"><span class="rvts42"> x </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">возвращает квадратный корень от </span><span class="rvts11">x</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sum(</span></span><span class="rvts0"><span class="rvts42"> x</span></span><span class="rvts0"><span class="rvts43">1</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">2</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">3</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">, ...</span></span><span class="rvts0"><span class="rvts42">x</span></span><span class="rvts0"><span class="rvts43">N</span></span><span class="rvts0"><span class="rvts42"> </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps30"><span class="rvts6">возвращает сумму всех аргументов.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

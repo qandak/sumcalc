@@ -1,0 +1,235 @@
+﻿<html>
+	
+<head>
+	<title>Функции конвертации</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Конвертация">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Conversionfunctions");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Функции конвертации</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Functionslist.html">Список функций</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Functionslist.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Specialfunctions.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Shortcutkeys.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">Функции конвертации</span></span></h3>
+<p class="rvps31"><span class="rvts49">Длина</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">in_mm(</span></span><span class="rvts0"><span class="rvts42"> inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Дюйм в Миллиметр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">in_cm(</span></span><span class="rvts0"><span class="rvts42"> inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Дюйм в Сантиметр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">in_m(</span></span><span class="rvts0"><span class="rvts42"> inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Дюйм в Метр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ft_in(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фут в Дюйм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ft_mm(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фут в Миллиметр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ft_cm(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фут в Сантиметр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ft_m(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фут в Метр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ftin_cm(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фут и Дюймы в Сантиметр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ftin_m(</span></span><span class="rvts0"><span class="rvts42"> foot </span></span><span class="rvts0"><span class="rvts41">, </span></span><span class="rvts0"><span class="rvts42">inch </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фут и Дюймы в Метр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">yd_in(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Ярд в Дюйм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">yd_ft(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Ярд в Фут.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">yd_mm(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Ярд в Миллиметр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">yd_cm(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Ярд в Сантиметр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">yd_m(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Ярд в Метр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">yd_km(</span></span><span class="rvts0"><span class="rvts42"> yard </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Ярд в Километр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">mi_yd(</span></span><span class="rvts0"><span class="rvts42"> mile </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Миль в Ярд.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">mi_m(</span></span><span class="rvts0"><span class="rvts42"> mile </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Миль в Метр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">mi_km(</span></span><span class="rvts0"><span class="rvts42"> mile </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Миль в Километр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">mm_in(</span></span><span class="rvts0"><span class="rvts42"> mm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Миллиметр в Дюйм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">cm_in(</span></span><span class="rvts0"><span class="rvts42"> cm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Сантиметр в Дюйм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">cm_ft(</span></span><span class="rvts0"><span class="rvts42"> cm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Сантиметр в Фут.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">cm_ftin(</span></span><span class="rvts0"><span class="rvts42"> cm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Сантиметр в Фут и Дюймы в виде функции </span><span class="rvts45">ftin_cm(</span><span class="rvts47">фут, дюймы</span><span class="rvts45">)</span><span class="rvts6">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">m_ftin(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Метр в Фут и Дюймы в виде функции </span><span class="rvts45">ftin_m(</span><span class="rvts47">фут, дюймы</span><span class="rvts45">)</span><span class="rvts6">..</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">m_in(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Метр в Дюйм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">m_ft(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Метр в Фут.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">m_yd(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Метр в Ярд.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">m_mi(</span></span><span class="rvts0"><span class="rvts42"> m </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Метр в Миль.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">km_mi(</span></span><span class="rvts0"><span class="rvts42"> km </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Километр в Миль.</span></p>
+<p class="rvps31"><span class="rvts49">Площадь</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqcm_sqin(</span></span><span class="rvts0"><span class="rvts42"> sqcm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Сантиметр в Кв.Дюйм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqm_sqft(</span></span><span class="rvts0"><span class="rvts42"> sqm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Метр в Кв.Фут.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqm_sqyd(</span></span><span class="rvts0"><span class="rvts42"> sqm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Метр в Кв.Ярд.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqm_ac(</span></span><span class="rvts0"><span class="rvts42"> sqm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Метр в Акр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqm_ha(</span></span><span class="rvts0"><span class="rvts42"> sqm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Метр в Гектар.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqkm_sqmi(</span></span><span class="rvts0"><span class="rvts42"> sqkm </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Километр в Кв.Миль.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqin_sqcm(</span></span><span class="rvts0"><span class="rvts42"> sqin </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Дюйм в Кв.Сантиметр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqft_sqm(</span></span><span class="rvts0"><span class="rvts42"> sqft </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Фут в Кв.Метр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqyd_sqm(</span></span><span class="rvts0"><span class="rvts42"> sqyd </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Ярд в Кв.Метр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqmi_sqkm(</span></span><span class="rvts0"><span class="rvts42"> sqmi </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Миль в Кв.Километр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqmi_ac(</span></span><span class="rvts0"><span class="rvts42"> sqmi </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Миль в Акр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">sqmi_ha(</span></span><span class="rvts0"><span class="rvts42"> sqmi </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кв.Миль в Гектар.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ac_ha(</span></span><span class="rvts0"><span class="rvts42"> ac </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Акр в Гектар.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ha_ac(</span></span><span class="rvts0"><span class="rvts42"> ha </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Гектар в Акр.</span></p>
+<p class="rvps31"><span class="rvts49">Объем</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">l_usgal(</span></span><span class="rvts0"><span class="rvts42"> l </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Литр в Амер.Галлон.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">l_ukgal(</span></span><span class="rvts0"><span class="rvts42"> l </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Литр в Брит.Галлон.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">gal_pt(</span></span><span class="rvts0"><span class="rvts42"> gal </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Галлон (Амер. или Брит.) в Пинту.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ukgal_l(</span></span><span class="rvts0"><span class="rvts42"> ukgal </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Брит.Галлон в Литр.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">usgal_l(</span></span><span class="rvts0"><span class="rvts42"> usgal </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Амер.Галлон в Литр.</span></p>
+<p class="rvps31"><span class="rvts49">Масса</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">oz_g(</span></span><span class="rvts0"><span class="rvts42"> ounce </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Унцию в Грамм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">lb_oz(</span></span><span class="rvts0"><span class="rvts42"> pound </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фунт в Унцию.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">lb_g(</span></span><span class="rvts0"><span class="rvts42"> pound </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фунт в Грамм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">lb_kg(</span></span><span class="rvts0"><span class="rvts42"> pound </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фунт в Килограмм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">g_oz(</span></span><span class="rvts0"><span class="rvts42"> gram </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Грамм в Унцию.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">g_lb(</span></span><span class="rvts0"><span class="rvts42"> gram </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Грамм в Фунт.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">kg_oz(</span></span><span class="rvts0"><span class="rvts42"> kg </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Килограмм в Унцию.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">kg_lb(</span></span><span class="rvts0"><span class="rvts42"> kg </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Килограмм в Фунт.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ct_g(</span></span><span class="rvts0"><span class="rvts42"> ct </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Карат в Грамм.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">ct_oz(</span></span><span class="rvts0"><span class="rvts42"> ct </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Карат в Унцию.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">g_ct(</span></span><span class="rvts0"><span class="rvts42"> g </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Грамм в Карат.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">oz_ct(</span></span><span class="rvts0"><span class="rvts42"> oz </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Унцию в Карат.</span></p>
+<p class="rvps31"><span class="rvts49">Энергия</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">wh_cl(</span></span><span class="rvts0"><span class="rvts42"> watt </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Ватт/час в Калорию.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">wh_j(</span></span><span class="rvts0"><span class="rvts42"> watt_h </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Ватт/час в Джоуль.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">cl_j(</span></span><span class="rvts0"><span class="rvts42"> calorie </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Калорию в Джоуль.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">cl_wh(</span></span><span class="rvts0"><span class="rvts42"> calorie </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Калорию в Ватт/час.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">j_cl(</span></span><span class="rvts0"><span class="rvts42"> joule </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Джоуль в Калорию.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">j_wh(</span></span><span class="rvts0"><span class="rvts42"> joule </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Джоуль в Ватт/час.</span></p>
+<p class="rvps31"><span class="rvts49">Мощность</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">kw_hp(</span></span><span class="rvts0"><span class="rvts42"> kw </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Киловатт в Лошадиную Силу.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">hp_kw(</span></span><span class="rvts0"><span class="rvts42"> hp </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Лошадиную Силу в Киловатт.</span></p>
+<p class="rvps31"><span class="rvts49">Температура</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">c_f(</span></span><span class="rvts0"><span class="rvts42"> c </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Цельсий в Фаренгейт.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">c_k(</span></span><span class="rvts0"><span class="rvts42"> c </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Цельсий в Кельвин.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">f_c(</span></span><span class="rvts0"><span class="rvts42"> f </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Фаренгейт в Цельсий.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">f_k(</span></span><span class="rvts0"><span class="rvts42"> f </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps30"><span class="rvts6">конвертирует Фаренгейт в Кельвин.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">k_c(</span></span><span class="rvts0"><span class="rvts42"> k </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps29"><span class="rvts6">конвертирует Кельвин в Цельсий.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts41">k_f(</span></span><span class="rvts0"><span class="rvts42"> k </span></span><span class="rvts0"><span class="rvts41">)</span></span></h5>
+<p class="rvps30"><span class="rvts6">конвертирует Кельвин в Фаренгейт.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+

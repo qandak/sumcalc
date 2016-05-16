@@ -1,0 +1,140 @@
+﻿<html>
+	
+<head>
+	<title>General math functions</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Functions">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Generalmathfunctions");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">General math functions</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Functionslist.html">Functions list</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Functionslist.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Functionslist.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Trigonometricfunctions.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<h3 class="rvps9"><span class="rvts0"><span class="rvts20">General math functions</span></span></h3>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">abs(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the absolute value of </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">amn(</span></span><span class="rvts0"><span class="rvts44"> x</span></span><span class="rvts0"><span class="rvts45">1</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">2</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">3</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, ...</span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">N</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the Arithmetic Mean (average) of all arguments.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">bin(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the binary representation of </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">cbrt(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the cube root of </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">ceil(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the ceiling of </span><span class="rvts42">x</span><span class="rvts41"> - the smallest integer greater than or equal to </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">dd(</span></span><span class="rvts0"><span class="rvts44"> degrees </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts degrees in decimal value to Degrees(°), Minutes(') and Seconds(") in the form of </span><span class="rvts42">dms(</span><span class="rvts50">degrees, minutes, seconds</span><span class="rvts42">)</span><span class="rvts41"> function.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">deg(</span></span><span class="rvts0"><span class="rvts44"> radians </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Radians to Degrees.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">dms(</span></span><span class="rvts0"><span class="rvts44"> degrees </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">minutes </span></span><span class="rvts0"><span class="rvts43">,</span></span><span class="rvts0"><span class="rvts47"> </span></span><span class="rvts0"><span class="rvts46">seconds</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Degrees(°), Minutes('), Seconds(") to decimal value.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">dperc(</span></span><span class="rvts0"><span class="rvts44"> old </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">new </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the percentage change from </span><span class="rvts42">old</span><span class="rvts41"> to </span><span class="rvts42">new</span><span class="rvts41"> numbers.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">exp(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns </span><span class="rvts42">e</span><span class="rvts41"> raised to the power </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">fact(</span></span><span class="rvts0"><span class="rvts44"> n </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns </span><span class="rvts42">n</span><span class="rvts41"> factorial. Raises an error if </span><span class="rvts42">n</span><span class="rvts41"> is not integral or is negative. </span><span class="rvts42">n</span><span class="rvts41"> is limited by </span><span class="rvts42">64</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">floor(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the floor of </span><span class="rvts42">x</span><span class="rvts41"> - the largest integer less than or equal to </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">gcd(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">y </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the Greatest Common Divisor (GCD) of integers </span><span class="rvts42">x</span><span class="rvts41"> and </span><span class="rvts42">y</span><span class="rvts41">. If either </span><span class="rvts42">x</span><span class="rvts41"> or </span><span class="rvts42">y</span><span class="rvts41"> is nonzero, then the value of </span><span class="rvts42">gcd( x , y )</span><span class="rvts41"> is the largest positive integer that divides both </span><span class="rvts42">x</span><span class="rvts41"> and </span><span class="rvts42">y</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">gmn(</span></span><span class="rvts0"><span class="rvts44"> x</span></span><span class="rvts0"><span class="rvts45">1</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">2</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">3</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, ...</span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">N</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the Geometric Mean of all arguments.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">hex(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the hexadecimal representation of </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">hmn(</span></span><span class="rvts0"><span class="rvts44"> x</span></span><span class="rvts0"><span class="rvts45">1</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">2</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">3</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, ...</span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">N</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the Harmonic Mean of all arguments.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">hyp(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">y </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the Euclidean norm, sqrt(x*x + y*y), the length of the vector from the origin to point (</span><span class="rvts42">x</span><span class="rvts41">, </span><span class="rvts42">y</span><span class="rvts41">).</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">max(</span></span><span class="rvts0"><span class="rvts44"> x</span></span><span class="rvts0"><span class="rvts45">1</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">2</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">3</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, ...</span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">N</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the largest item in arguments list.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">min(</span></span><span class="rvts0"><span class="rvts44"> x</span></span><span class="rvts0"><span class="rvts45">1</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">2</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">3</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, ...</span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">N</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the smallest item in arguments list.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">mod(</span></span><span class="rvts0"><span class="rvts44"> dividend </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">divisor </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the remainder after division.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">oct(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the octal representation of </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">pc(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">percent </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the </span><span class="rvts42">percent</span><span class="rvts41"> of </span><span class="rvts42">x</span><span class="rvts41"> (see also </span><span class="rvts42">perc</span><span class="rvts41"> function).</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">perc(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">percent </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns </span><span class="rvts42">x</span><span class="rvts41"> increased or (-) decreased by </span><span class="rvts42">percent</span><span class="rvts41"> (see also </span><span class="rvts42">pc</span><span class="rvts41"> function).</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">pow(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">y </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns </span><span class="rvts42">x</span><span class="rvts41"> raised to the power </span><span class="rvts42">y</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">rad(</span></span><span class="rvts0"><span class="rvts44"> degrees </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">converts Degrees to Radians.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">round(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts46">dig</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">if </span><span class="rvts48">dig</span><span class="rvts41"> is omitted, returns the nearest integer of </span><span class="rvts42">x</span><span class="rvts41">, otherwise - rounded to </span><span class="rvts48">dig</span><span class="rvts41"> (digits) after point.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">rt(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">N </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the </span><span class="rvts42">N</span><span class="rvts49">th</span><span class="rvts41"> root of </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sqrt(</span></span><span class="rvts0"><span class="rvts44"> x </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps29"><span class="rvts41">returns the square root of </span><span class="rvts42">x</span><span class="rvts41">.</span></p>
+<h5 class="rvps28"><span class="rvts0"><span class="rvts43">sum(</span></span><span class="rvts0"><span class="rvts44"> x</span></span><span class="rvts0"><span class="rvts45">1</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">2</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, </span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">3</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">, ...</span></span><span class="rvts0"><span class="rvts44">x</span></span><span class="rvts0"><span class="rvts45">N</span></span><span class="rvts0"><span class="rvts44"> </span></span><span class="rvts0"><span class="rvts43">)</span></span></h5>
+<p class="rvps30"><span class="rvts41">returns the Sum of all arguments.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 L.Melikyan.</div>
+		</div>
+	</body>
+	
+</html>
+
