@@ -195,11 +195,13 @@ class ConstDialog(QtWidgets.QDialog):
             return super(ConstDialog, self).keyPressEvent(e)
 
     def delConstVar(self):
-        line = self.constvarModel.data(self.listView.currentIndex())
-        name = line.split('=')[0].strip()
-        del safeeval_dict[name]
-        del cstmConstVars[name]
-        self.constvarModel.removeRow(self.listView.currentIndex().row())
+        if self.listView.currentIndex().row() >= len(constants):
+            self.constvarModel.removeRow(self.listView.currentIndex().row())
+            line = self.constvarModel.data(self.listView.currentIndex())
+            if line:
+                name = line.split('=')[0].strip()
+                del safeeval_dict[name]
+                del cstmConstVars[name]
 
     def statTurnBack(self):
         self.statBar.setText(translate('ConstVarDialog',
@@ -336,26 +338,25 @@ class ConstDialog(QtWidgets.QDialog):
             pass
 
     def saveConstVars(self):
-        if len(cstmConstVars):
-            f = QtCore.QFile(self.constvarFile)
-            line = QtCore.QByteArray()
-            if f.open(QtCore.QIODevice.WriteOnly | QtCore.QIODevice.Text):
-                for row in range(self.constvarModel.rowCount()):
-                    if self.constvarModel.item(row, 0).isEnabled() and\
-                            self.constvarModel.item(row, 0).checkState() == 2:
-                        line.append((self.constvarModel.data(
-                            self.constvarModel.index(row, 0)) + '\n').encode('UTF-8'))
-                    else:
-                        continue
-                f.write(line)
-                f.close()
-            else:
-                self.saveMessageBox(translate('MessageBox',
-                                              'Constants and Variables'),
-                                    translate('MessageBox',
-                                              '{0} Unable to save \'{1}\' file!\n').format(
-                                                    f.errorString(),
-                                                    self.constvarFile))
+        f = QtCore.QFile(self.constvarFile)
+        line = QtCore.QByteArray()
+        if f.open(QtCore.QIODevice.WriteOnly | QtCore.QIODevice.Text):
+            for row in range(self.constvarModel.rowCount()):
+                if self.constvarModel.item(row, 0).isEnabled() and\
+                        self.constvarModel.item(row, 0).checkState() == 2:
+                    line.append((self.constvarModel.data(
+                        self.constvarModel.index(row, 0)) + '\n').encode('UTF-8'))
+                else:
+                    continue
+            f.write(line)
+            f.close()
+        else:
+            self.saveMessageBox(translate('MessageBox',
+                                          'Constants and Variables'),
+                                translate('MessageBox',
+                                          '{0} Unable to save \'{1}\' file!\n').format(
+                                                f.errorString(),
+                                                self.constvarFile))
 
 
 class PrefsDialog(QtWidgets.QDialog):
