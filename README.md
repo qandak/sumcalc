@@ -12,7 +12,7 @@ Main UI - *screenshots:*
 
 ![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/main_en.png "Simple view")
 
-**1.** Title bar - *with current angle units indicator*, **2.** Calculation Field, **3.** History
+**1.** Title bar *(with current angular unit indicator)*, **2.** Calculation Field, **3.** History
 
 **a**) Autocopy status;  **b**) History button; **c**) Menu button
 
@@ -20,7 +20,7 @@ Main UI - *screenshots:*
 
 * Minimalistic UI
 * Calculation History
-* Global Shortcut Key *(works only in Windows, for another OS try system-specific tools)*
+* Global Shortcut Key *(available in Windows only, for other OS's try system-specific keybindings)*
 * More than 120 functions
 * Function in-line Quickhelp
 * Function suggestion if mistyped
@@ -47,7 +47,7 @@ Main UI - *screenshots:*
 + [Python](https://www.python.org) - 3.4+
 + [PyQt5](https://riverbankcomputing.com/software/pyqt) - 5.x
 
-Executable file is **main.py**. Global Shortcut Key is working only in Windows (for an operating system other than Windows try a system-specific tool). 
+App is launching by **main.py** file. Global Shortcut Key is available in Windows only (for other OS's try system-specific keybindings). 
 
 #### Portable bundle for Windows is available:
 
