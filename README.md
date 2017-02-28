@@ -6,7 +6,7 @@ The name **SUM** does not indicate mathematical operation of addition. It's just
 
 SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calculator with History. It's designed for full-size keyboards with numeric keypad - to pop up and close with Num Lock key and turn so the numeric keypad to calculator, however you can change the key binding in Settings and use it with any keyboard.
 
-*Main UI:*
+#### Main UI
 
 ![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/main_hst_en.png "History view")
 
