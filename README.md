@@ -2,7 +2,7 @@
 
 ## SUM Calculator
 
-The name **SUM** does not indicate mathematical operation of addition. It's just an abbreviation - **Stop Using Mouse!** (... at least for calculations)
+The name **SUM** does not indicate mathematical operation of addition. It's just an abbreviation - **S**top **U**sing **M**ouse! ( ... at least for calculations)
 
 SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calculator with History. It's designed for full-size keyboards with numeric keypad - to pop up and close with Num Lock key and turn so the numeric keypad to calculator, however you can change the key binding in Settings and use it with any keyboard.
 
