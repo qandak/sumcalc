@@ -2,9 +2,9 @@
 
 ## SUM Calculator
 
-The name **SUM** does not indicate mathematical operation of addition. It's just an abbreviation - **Stop Using Mouse!** (...at least for calculation)
+The name **SUM** does not indicate mathematical operation of addition. It's just an abbreviation - **Stop Using Mouse!** (... at least for calculations)
 
-SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calculator with History.
+SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calculator with History. It's designed for full-size keyboards with numeric keypad - to pop up and close with Num Lock key and turn so the numeric keypad to calculator, however you can change the key binding in Settings and use it with any keyboard.
 
 *Main UI:*
 
@@ -52,7 +52,9 @@ App is launching by **main.py**. Global Shortcut Key is available in Windows onl
 ### Portable bundle for Windows is available:
 
 [![Download SUM Calculator](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/sumcalc/files/latest/download)
-Unzip, put the folder wherever you want (system folders like "Program Files" are not desirable), run sumcalc.exe. That's it, no installation needed! For convenience, you may also create a shortcut on your desktop or in Start menu.
+
+Unzip, put the folder wherever you want (system folders like "Program Files" are not desirable), run sumcalc.exe. That's it, no installation needed! For convenience, you may also create a shortcut for Desktop or Start menu.
+
 ---
 
 ### Author
