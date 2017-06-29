@@ -50,8 +50,9 @@ SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calcu
 + [PyQt5](https://riverbankcomputing.com/software/pyqt) - 5.x
 
 App is launching by `python main.py`. Global Shortcut Key is a Windows-only feature for the moment, for an OS other than Windows try system-specific keybinding tools.
+</br></br>
 
-**Portable bundle for Windows** &nbsp; [![Download SUM Calculator](https://sourceforge.net/sflogo.php?type=9&group_id=2696916)](https://sourceforge.net/p/sumcalc/)  
+### Portable bundle for Windows &nbsp; </br> [![Download SUM Calculator](https://sourceforge.net/sflogo.php?type=9&group_id=2696916)](https://sourceforge.net/p/sumcalc/)
 *(versions from 'XP' to '10' supported)*
 
 [![Download SUM Calculator](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/sumcalc/files/latest/download)
