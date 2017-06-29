@@ -53,9 +53,10 @@ App is launching by `python main.py`. Global Shortcut Key is a Windows-only feat
 </br></br>
 
 ### Portable bundle for Windows [![Download SUM Calculator](https://sourceforge.net/sflogo.php?type=9&group_id=2696916)](https://sourceforge.net/p/sumcalc/)
-*Versions supported: XP / Vista / 7 / 8 / 8.1 / 10*
 
 [![Download SUM Calculator](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/sumcalc/files/latest/download)
+
+Versions supported: 10 / 8 / Vista / 7 / XP
 
 Download `SUM-<version>.zip` file by the button above. Unzip, put the folder wherever you want (system folders like `Program Files` are **not recommended**), run `sumcalc.exe`. That's it, no installation needed! For convenience, you can also create a shortcut for Desktop or Start menu.
 
