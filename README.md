@@ -1,59 +1,62 @@
 ![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/sum96.png "SUM Logo")
+# SUM Calculator
 
-## SUM Calculator
+[![License GPL3](https://img.shields.io/badge/license-GPL%203-green.svg)](https://github.com/qandak/sumcalc/blob/master/LICENSE) [![Download SUM Calculator](https://img.shields.io/sourceforge/dw/sumcalc.svg)](https://sourceforge.net/projects/sumcalc/files/latest/download)
 
-The name **SUM** does not indicate mathematical operation of addition. It's just an abbreviation - **S**top **U**sing **M**ouse! ( ... at least for calculations)
+The name **SUM** does not indicate mathematical operation of addition. It's just an abbreviation - **S**top **U**sing **M**ouse!  ... at least for calculations.
 
-SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calculator with History. It's designed for full-size keyboards with numeric keypad - to pop up and close with NumLock key and turn so the numeric keypad to calculator, however you can change the key binding in settings and use it with any keyboard.
+SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calculator with History. It's designed for full-size keyboards with numeric keypad - to pop up and close with NumLock key and turn so the numeric keypad to calculator. However you can change the key binding in settings and use it with any keyboard.
+</br></br>
 
-#### Main UI
+### Main UI
 
-![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/main_hst_en.png "History view")
-
+![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/main_hst_en.png "History view")  
 ![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/main_en.png "Simple view")
 
-**1.** Title bar *(with current angular unit indicator)*, **2.** Calculation Field, **3.** History
+**1.** Title bar *(with current angular unit indicator)*  
+**2.** Calculation Field  
+**3.** History
 
-**a**) Autocopy status;  **b**) History button; **c**) Menu button
+**a**) Autocopy status &nbsp; **b**) History button &nbsp; **c**) Menu button
+</br></br>
 
-#### Key features
+### Key features
+- Minimalistic UI
+- Calculation History
+- More than 120 functions
+- Function in-line Quickhelp
+- Function suggestion if mistyped
+- Pop-up error notifications
+- Docs included (Help)
+- Global Shortcut Key (Windows-only for the moment)*  
+**for an OS other than Windows try system-specific keybinding tools*
 
-* Minimalistic UI
-* Calculation History
-* Global Shortcut Key *(available in Windows only, for other OS's try system-specific keybindings)*
-* More than 120 functions
-* Function in-line Quickhelp
-* Function suggestion if mistyped
-* Pop-up error notifications
-
-![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/quickhelp_en.png "Quickhelp")
-
-![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/nameerror_en.png "Suggestions")
-
-![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/syntaxerror_en.png "Error notification")
+![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/quickhelp_en.png "Quickhelp")  
+![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/nameerror_en.png "Suggestions")  
+![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/syntaxerror_en.png "Error notification")  
 
 #### Languages
 
-* English - default
+* English - default  
 * Russian - translation
 
 ---
 
+### Installation
 
-### Install
-
-**Requirements:**
+**Requirements**
 
 + [Python](https://www.python.org) - 3.4+
 + [PyQt5](https://riverbankcomputing.com/software/pyqt) - 5.x
 
-App is launching by **main.py**. Global Shortcut Key is available in Windows only (for other OS's try system-specific keybindings). 
+App is launching by `python main.py`. Global Shortcut Key is a Windows-only feature for the moment, for an OS other than Windows try system-specific keybinding tools.
 
-### Portable bundle for Windows is available:
+**Portable bundle for Windows** &nbsp; [![Download SUM Calculator](https://sourceforge.net/sflogo.php?type=9&group_id=2696916)](https://sourceforge.net/p/sumcalc/)  
+*(versions from 'XP' to '10' supported)*
 
 [![Download SUM Calculator](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/sumcalc/files/latest/download)
 
-Unzip, put the folder wherever you want (system folders like "Program Files" are not desirable), run sumcalc.exe. That's it, no installation needed! For convenience, you can also create a shortcut for Desktop or Start menu.
+Download `SUM-<version>.zip` file by the green button below. Unzip, put the folder wherever you want (system folders like `Program Files` are **not recommended**), run `sumcalc.exe`. That's it, no installation needed! For convenience, you can also create a shortcut for Desktop or Start menu.
 
 ---
 
