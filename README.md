@@ -21,15 +21,16 @@ SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calcu
 </br></br>
 
 ### Key features
-- Minimalistic UI
-- Calculation History
-- More than 120 functions
-- Function in-line Quickhelp
-- Function suggestion if mistyped
-- Pop-up error notifications
-- Docs included (Help)
-- Global Shortcut Key (Windows-only for the moment)*  
-**for an OS other than Windows try system-specific keybinding tools*
+- [x] Minimalistic UI
+- [x] Calculation History
+- [x] More than 120 functions
+- [x] Function in-line Quickhelp
+- [x] Function suggestion if mistyped
+- [x] Pop-up error notifications
+- [x] Docs included (Help)
+- [x] Global Shortcut Key (Windows-only for the moment)\*
+
+\**for an OS other than Windows try system-specific keybinding tools*
 
 ![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/quickhelp_en.png "Quickhelp")  
 ![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/nameerror_en.png "Suggestions")  
@@ -44,20 +45,19 @@ SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calcu
 
 ### Installation
 
-**Requirements**
-
+Requirements:
 + [Python](https://www.python.org) - 3.4+
 + [PyQt5](https://riverbankcomputing.com/software/pyqt) - 5.x
 
 App is launching by `python main.py`. Global Shortcut Key is a Windows-only feature for the moment, for an OS other than Windows try system-specific keybinding tools.
 </br></br>
 
-### Portable bundle for Windows &nbsp; </br> [![Download SUM Calculator](https://sourceforge.net/sflogo.php?type=9&group_id=2696916)](https://sourceforge.net/p/sumcalc/)
-*(versions from 'XP' to '10' supported)*
+### Portable bundle for Windows [![Download SUM Calculator](https://sourceforge.net/sflogo.php?type=9&group_id=2696916)](https://sourceforge.net/p/sumcalc/)
+*Versions supported: XP / Vista / 7 / 8 / 8.1 / 10*
 
 [![Download SUM Calculator](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/sumcalc/files/latest/download)
 
-Download `SUM-<version>.zip` file by the green button below. Unzip, put the folder wherever you want (system folders like `Program Files` are **not recommended**), run `sumcalc.exe`. That's it, no installation needed! For convenience, you can also create a shortcut for Desktop or Start menu.
+Download `SUM-<version>.zip` file by the button above. Unzip, put the folder wherever you want (system folders like `Program Files` are **not recommended**), run `sumcalc.exe`. That's it, no installation needed! For convenience, you can also create a shortcut for Desktop or Start menu.
 
 ---
 
