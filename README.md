@@ -23,11 +23,11 @@ SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calcu
 ### Key features
 - [x] Minimalistic UI
 - [x] Calculation History
+- [x] Pop-up error notifications
 - [x] More than 120 functions
 - [x] Function in-line Quickhelp
 - [x] Function suggestion if mistyped
-- [x] Pop-up error notifications
-- [x] Docs included (Help)
+- [x] Help files included
 - [x] Global Shortcut Key (Windows-only for the moment)\*
 
 \**for an OS other than Windows try system-specific keybinding tools*
