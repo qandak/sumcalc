@@ -51,7 +51,7 @@ translate = QtWidgets.QApplication.translate
 QT_TRANSLATE_NOOP = QtCore.QT_TRANSLATE_NOOP
 
 appname = 'SUM'
-version = '0.3b'
+version = '0.4b'
 
 firstStartMsg_NL = QT_TRANSLATE_NOOP('FirstStart', '''
 <font size=4><b>First Start</b></font>
@@ -488,6 +488,8 @@ class MainWindow(QtWidgets.QWidget):
         self.ffamily = 'MS Shell Dlg'
         if platform == 'win':
             self.fsizeCoef = 2
+
+        self.moved_or_resized = True
 
         # -------- #
         # SETTINGS #
@@ -1007,6 +1009,7 @@ class MainWindow(QtWidgets.QWidget):
             pass
 
     def checkAutoCopy(self):
+        self.needToSaveSettings()
         if self.autoCopy:
             self.menuAutocopy.setChecked(False)
             self.autoCopy = False
@@ -1019,6 +1022,21 @@ class MainWindow(QtWidgets.QWidget):
     def keyPressEvent(self, e):
         if e.key() == QtCore.Qt.Key_Escape:
             self.lineedit.setFocus()
+
+    def resizeEvent(self, e):
+        self.needToSaveSettings()
+
+    def moveEvent(self, e):
+        self.needToSaveSettings()
+
+    def needToSaveSettings(self):
+        if not self.moved_or_resized:
+            self.moved_or_resized = True
+            QtCore.QTimer.singleShot(3000, self.settingsChanged)
+
+    def settingsChanged(self):
+        self.writeSettings()
+        self.moved_or_resized = False
 
     def closeEvent(self, e):
         if self._want_to_close:
@@ -1706,7 +1724,7 @@ class HotkeyListener(QtCore.QThread):
 
 if __name__ == '__main__':
 
-    myappid = 'lmelikyan.app.sumcalc.01b'
+    myappid = 'lmelikyan.app.sumcalc'
 
     if platform == 'win':   # >= Win7 -> major:6, minor:1
         if sys.getwindowsversion()[0] > 6 or \
@@ -1724,11 +1742,12 @@ if __name__ == '__main__':
                               QtCore.Qt.WindowCloseButtonHint)
 
     mainWindow.tray.show()
-    mainWindow.show()
 
     if common._start_minimized:
         mainWindow.hide()
         common._first_minimize = False
+    else:
+        mainWindow.show()
 
     if not QtCore.QFile.exists('settings.ini'):         # if it's the first start
         if platform == 'win' and mainWindow.key2 == 0:  # and NumLock is set as Global Shortcut
@@ -1741,8 +1760,10 @@ if __name__ == '__main__':
                                           translate('FirstStart', firstStartMsg))
 
     mainWindow.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+    mainWindow.moved_or_resized = False
 
     app.setActivationWindow(mainWindow)
+    app.aboutToQuit.connect(mainWindow.exitApp)
 
     mainWindow.listView.scrollToBottom()
     mainWindow.lineedit.setFocus()
