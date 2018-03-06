@@ -1,7 +1,7 @@
 ![alt text](https://raw.githubusercontent.com/qandak/sumcalc/master/help/en/html/lib/sum96.png "SUM Logo")
 # SUM Calculator
 
-[![License GPL3](https://img.shields.io/badge/license-GPL%203-green.svg)](https://github.com/qandak/sumcalc/blob/master/LICENSE) [![Download SUM Calculator](https://img.shields.io/sourceforge/dw/sumcalc.svg)](https://sourceforge.net/projects/sumcalc/files/latest/download)
+[![License GPL3](https://img.shields.io/badge/license-GPL%203-green.svg)](https://github.com/qandak/sumcalc/blob/master/LICENSE)    <!-- [![Download SUM Calculator](https://img.shields.io/sourceforge/dw/sumcalc.svg)](https://sourceforge.net/projects/sumcalc/files/latest/download)) -->
 
 The name **SUM** does not indicate mathematical operation of addition. It's just an abbreviation - **S**top **U**sing **M**ouse!  ... at least for calculations.
 
