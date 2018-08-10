@@ -46,10 +46,12 @@ SUM is an easy to use yet powerful and intuitive cross-platform "one-line" calcu
 ### Installation
 
 Requirements:
-+ [Python](https://www.python.org) - 3.4+
++ [Python](https://www.python.org) - 3.5+
 + [PyQt5](https://riverbankcomputing.com/software/pyqt) - 5.x
 
-App is launching by `python main.py`. Global Shortcut Key is a Windows-only feature for the moment, for an OS other than Windows try system-specific keybinding tools.
+App is launching by `python main.py`\*. Global Shortcut Key is a Windows-only feature for the moment, for an OS other than Windows try system-specific keybinding tools.
+</br>
+\* <sub>for some systems it may be `python3 main.py`</sub>.
 </br></br>
 
 ### Portable bundle for Windows [![Download SUM Calculator](https://sourceforge.net/sflogo.php?type=9&group_id=2696916)](https://sourceforge.net/p/sumcalc/)
@@ -58,7 +60,7 @@ App is launching by `python main.py`. Global Shortcut Key is a Windows-only feat
 
 Versions supported: 10 / 8 / Vista / 7 / XP
 
-Download `SUM-<version>.zip` file by the button above. Unzip, put the folder wherever you want (system folders like `Program Files` are **not recommended**), run `sumcalc.exe`. That's it, no installation needed! For convenience, you can also create a shortcut for Desktop or Start menu.
+Download `SUM-<version>.zip` file by the button above. Unzip, put the folder wherever you want (system folders like `Program Files` are not recommended), run `sumcalc.exe`. That's it, no installation needed! For convenience, you can also create a shortcut for Desktop or Start menu.
 
 ---
 
