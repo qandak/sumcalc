@@ -235,7 +235,7 @@ def reformat(rawtext):
                     stack.append(i)
             elif i == ',':
                 stack.append(', ')
-            elif i is not ' ':
+            elif i != ' ':
                 stack.append(i)
             n += 1
         if '//' in s:

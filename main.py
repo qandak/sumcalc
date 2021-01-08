@@ -18,7 +18,7 @@ from os import getcwd
 from time import sleep
 from datetime import datetime
 from platform import platform as _platform, python_version  # for logging only
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui
 
 # APP modules
 import common
@@ -51,7 +51,7 @@ translate = QtWidgets.QApplication.translate
 QT_TRANSLATE_NOOP = QtCore.QT_TRANSLATE_NOOP
 
 appname = 'SUM'
-version = '0.4b'
+version = '0.5b'
 
 firstStartMsg_NL = QT_TRANSLATE_NOOP('FirstStart', '''
 <font size=4><b>First Start</b></font>
@@ -484,10 +484,8 @@ class MainWindow(QtWidgets.QWidget):
         self.off = translate('ToolTip', 'Off')
         self.invInput = translate('Balloon', '<b>Invalid input:</b> ')
 
-        self.fsizeCoef = 0
+        self.fontSizeRaw = self.font().pointSize()
         self.ffamily = 'MS Shell Dlg'
-        if platform == 'win':
-            self.fsizeCoef = 2
 
         self.moved_or_resized = True
 
@@ -506,6 +504,7 @@ class MainWindow(QtWidgets.QWidget):
         # UI Variables/Constants
         self.setMinimumSize(self.minW, self.minH)
         self.mainH = self.buttonsSize + (2 * self.m)    # Define mainLayout height
+        self.windowOpenH = self.minH
         self.comboMake()
 
         # Defining Main Window DEFAULT size W:H and origin L:T (Left-Top)
@@ -679,7 +678,7 @@ class MainWindow(QtWidgets.QWidget):
         else:
             self.saveMessageBox(translate('MessageBox', 'History'),
                                 translate('MessageBox',
-                                          'Unable to save \'{1}\' file!\n'.format(self.historyFile)))
+                                          'Unable to save \'{0}\' file!\n'.format(self.historyFile)))
 
     def applyTranslator(self):
         # Load Translators
@@ -738,8 +737,7 @@ class MainWindow(QtWidgets.QWidget):
         self.listButton.setIconSize(QtCore.QSize(self.iconSize, self.iconSize))
         self.settButton.setIcon(QtGui.QIcon(self.iconPath + 'menu.png'))
         self.settButton.setIconSize(QtCore.QSize(self.iconSize, self.iconSize))
-        self.lineedit.setFont(QtGui.QFont(self.ffamily, self.fontSize))
-        self.listView.setFont(QtGui.QFont(self.ffamily, self.fontSize))
+        self.updateFontSize()
 
         self.buttonLayout.setSpacing(self.m // 2 - 2)
         self.mainLayout.setSpacing(self.m // 2)
@@ -760,6 +758,10 @@ class MainWindow(QtWidgets.QWidget):
             self.move(self.screenW - self.frameGeometry().width(), self.pos().y())
         self.show()
 
+    def updateFontSize(self):
+        self.lineedit.setFont(QtGui.QFont(self.ffamily, self.fontSize))
+        self.listView.setFont(QtGui.QFont(self.ffamily, self.fontSize))
+
     def aboutDialog(self):
         aboutText = translate('About', '''
             <font size=4><b>{a}</b>
@@ -769,8 +771,8 @@ class MainWindow(QtWidgets.QWidget):
             <a href="https://github.com/qandak/sumcalc">GitHub</a> Homepage</p>
             <p>{a} <i></i> is an advanced cross-platform<br />
             one-line GUI calculator based on<br />
-            Python interpreter.<br />
-            (ver. Python v{py} {pl1})</p>
+            Python interpreter and Qt framework.<br />
+            (Python v{py} {pl}, PyQt v{qt})</p>
             <p>
             <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> License<br />
             Copyright © 2016 Levon Melikyan<br />
@@ -781,7 +783,8 @@ class MainWindow(QtWidgets.QWidget):
                                 aboutText.format(a=appname,
                                                 ver=version,
                                                 py=python_version(),
-                                                pl1=sys.platform))
+                                                pl=sys.platform,
+                                                qt=QtCore.qVersion()))
 
     def helpOpen(self):
         dir = getcwd()
@@ -802,6 +805,7 @@ class MainWindow(QtWidgets.QWidget):
             self.prefs.uiResSelect.setCurrentIndex(1)
         else:
             self.prefs.uiResSelect.setCurrentIndex(0)
+        self.prefs.fontSize.setValue(self.fontSizeRaw)
         self.prefs.calcScient.setChecked(common._scientific_on)
         self.prefs.angDegrees.setChecked(not common._use_radians)
         self.prefs.angRadians.setChecked(common._use_radians)
@@ -874,6 +878,11 @@ class MainWindow(QtWidgets.QWidget):
                 self.makeUiNormal()
                 self.reinitUI()
 
+        if self.prefs.fontSize != self.fontSizeRaw:
+            self.fontSizeRaw = self.prefs.fontSize.value()
+            self.fontSize = self.fontSizeRaw * (2 if self.uiDouble else 1)
+            self.updateFontSize()
+
         self.setWindowTitle('{0} {1}    [ {2} ]'.format(
                             appname,
                             version,
@@ -889,6 +898,7 @@ class MainWindow(QtWidgets.QWidget):
     def readSettings(self):
         self.lang = self.settings.value('lang', QtCore.QLocale.system().name(), type=str)
         self.uiDouble = self.settings.value('uidouble', False, type=bool)
+        self.fontSizeRaw = self.settings.value('fsraw', self.font().pointSize(), type=int)
         if self.uiDouble:
             self.makeUiDouble()
         else:
@@ -931,6 +941,7 @@ class MainWindow(QtWidgets.QWidget):
                 self.settings.setValue('reformat', common._reformat_on)
                 self.settings.setValue('startmin', common._start_minimized)
                 self.settings.setValue('uidouble', self.uiDouble)
+                self.settings.setValue('fsraw', self.fontSizeRaw)
                 self.settings.setValue('histmax', self.histMax)
                 self.settings.setValue('historysave', self.histSave)
                 self.settings.setValue('histdelonexit', self.histDelOnExit)
@@ -962,7 +973,7 @@ class MainWindow(QtWidgets.QWidget):
         self.buttonsSize = 40
         self.iconPath = './icons/32/'
         self.iconSize = 32
-        self.fontSize = (self.font().pointSize() + self.fsizeCoef) * 2
+        self.fontSize = self.fontSizeRaw * 2
 
     def makeUiNormal(self):
         self.minW = 300
@@ -971,7 +982,7 @@ class MainWindow(QtWidgets.QWidget):
         self.buttonsSize = 24
         self.iconPath = './icons/16/'
         self.iconSize = 16
-        self.fontSize = self.font().pointSize() + self.fsizeCoef
+        self.fontSize = self.fontSizeRaw
 
     def historyClearConfirm(self):
         if self.model.rowCount() > 0:
@@ -1625,11 +1636,13 @@ class MainWindow(QtWidgets.QWidget):
     def exceptionHandler(self, type, value, tback):
         common._expr_tryassign = False
         log = [
-                '\n'
+                '\n',
                 '{0}\n'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
                 '-------------------\n',
-                'Python v{0} on {1} ({2}x{3})\n\n'.format(
+                appname + ' v' + version,
+                'Python v{0} & PyQt v{1} on {2} ({3}x{4})\n\n'.format(
                             python_version(),
+                            QtCore.qVersion(),
                             _platform(),
                             self.screenW,
                             self.desktop.screenGeometry().height()),
@@ -1763,7 +1776,7 @@ if __name__ == '__main__':
     mainWindow.moved_or_resized = False
 
     app.setActivationWindow(mainWindow)
-    app.aboutToQuit.connect(mainWindow.exitApp)
+    app.aboutToQuit().connect(mainWindow.exitApp)
 
     mainWindow.listView.scrollToBottom()
     mainWindow.lineedit.setFocus()

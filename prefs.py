@@ -393,7 +393,6 @@ class PrefsDialog(QtWidgets.QDialog):
         self.uiLangSelect.addItems([
                             translate('LangList', 'English'),
                             translate('LangList', 'Russian')])
-        self.uiLangSelect.setMinimumWidth(75)
         self.uiLangSelect.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
         self.uiLangSelect.setEditable(False)
         self.uiLangLabel = QtWidgets.QLabel(translate('Prefs', 'Language: '))
@@ -404,25 +403,33 @@ class PrefsDialog(QtWidgets.QDialog):
         uiLeftLayout.setAlignment(QtCore.Qt.AlignTop)
         uiLeftLayout.addItem(uiLangLayout)
         # -
-        uiResLayout = QtWidgets.QVBoxLayout()
+        uiResLayout = QtWidgets.QHBoxLayout()
         uiResLayout.setAlignment(QtCore.Qt.AlignTop)
         resToolTip = translate('Prefs',
             'Double is recomended if screen resolution is UltraHD or higher.')
         self.uiResSelect = QtWidgets.QComboBox()
         self.uiResSelect.addItems([translate('Prefs', 'Native'),
                                    translate('Prefs', 'Double')])
-        self.uiResSelect.setMinimumWidth(75)
         self.uiResSelect.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
         self.uiResSelect.setEditable(False)
         self.uiResSelect.setToolTip(resToolTip)
         self.uiResLabel = QtWidgets.QLabel(translate('Prefs', 'Resolution: '))
         self.uiResLabel.setToolTip(resToolTip)
         uiResSelectLayout = QtWidgets.QHBoxLayout()
-        uiResSelectLayout.setContentsMargins(0, 0, 0, 7)
         uiResSelectLayout.setAlignment(QtCore.Qt.AlignRight)
         uiResSelectLayout.addWidget(self.uiResLabel)
         uiResSelectLayout.addWidget(self.uiResSelect)
         uiResLayout.addItem(uiResSelectLayout)
+
+        self.fontSize = QtWidgets.QSpinBox()
+        self.fontSize.setAlignment(QtCore.Qt.AlignRight)
+        self.fontSize.setRange(6, 36)
+        self.fontSize.setToolTip('Font Size (pt)')
+        fontSizeLayout = QtWidgets.QHBoxLayout()
+        fontSizeLayout.setContentsMargins(5, 0, 0, 0)
+        fontSizeLayout.addWidget(self.fontSize)
+        uiResLayout.addItem(fontSizeLayout)
+
         # -
         uiLayout.addItem(uiLeftLayout)
         uiLayout.addItem(uiResLayout)
