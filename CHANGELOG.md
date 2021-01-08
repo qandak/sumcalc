@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5 beta] - 2021-01-08
+### Added
+- Added font size settings
+### Fixed
+- Minor fixes
+
 ## [0.4 beta] - 2017-12-09
 ### Fixed
 - Fix history saving on system reboot or power off.
